@@ -1,25 +1,22 @@
-import tensorflow as tf
-from keras.applications.vgg16 import VGG16
-from keras.preprocessing.image import load_img, img_to_array, smart_resize
+from tensorflow.keras.applications.vgg16 import VGG16
+from tensorflow.keras.preprocessing.image import load_img, img_to_array, smart_resize
 import numpy as np
 from elasticsearch import Elasticsearch
+from pprint import pprint
+import glob
+
 
 # Load VGG16
 model = VGG16()
 model.summary()
 
+
 # Load Elasticsearch
-es = Elasticsearch(['host': '10.1.32.130', 'port': '9200'])
-
-image_path= r"./datasets/identity_card/mat_truoc_1.png"
-
-
-img = load_img(image_path)
-
-ORIGIN_IMAGE_SIZE = (224,224)
+es = Elasticsearch([{'host': '10.1.32.130', 'port': '9200'}])
 
 
 def get_feature_map_encode(img):
+    ORIGIN_IMAGE_SIZE = (224,224)
     input = img_to_array(img) 
     input = smart_resize(input, ORIGIN_IMAGE_SIZE, interpolation='bilinear')
     input = np.expand_dims(input, axis=0)
@@ -29,4 +26,25 @@ def get_feature_map_encode(img):
     return feature_maps_list
 
 
-# def upload_dataset_on_elasticseach(datasets_dir):
+files  = glob.glob("./test_data/*")
+for file in files:
+    vector = get_feature_map_encode(load_img(file))
+    query = {
+        'size': 1,
+        'query': {
+            "script_score": {
+                "query": {
+                    "match_all": {}
+                },
+                "script": {
+                    "source": "cosineSimilarity(params.queryVector, 'vector') + 1",
+                    "params":{
+                        "queryVector": vector
+                    }
+                }
+            }
+        }
+    }
+    res = es.search(index='document_recognition', body = query)
+    print(file.split("//")[-1], res['hits']['hits'][0]['_source']['document_type_name'])
+
