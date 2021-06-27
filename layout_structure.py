@@ -44,7 +44,7 @@ model.cuda()
 checkpoint_path = MODEL_PATH
 checkpoint = torch.load(checkpoint_path, map_location='cpu')
 
-test_datas = image_utils.load_datasets('./test_data')
+test_datas = image_utils.load_datasets('./datasets/document_classify/test')
 
 
 for file_path in test_datas:
