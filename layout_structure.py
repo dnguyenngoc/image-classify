@@ -19,11 +19,13 @@ CATEGORIES2LABELS = {
     5: "figure"
 }
 NUM_CLASSES = 6
-MODEL_PATH = "./models/layout_structure/final.pth"
+MODEL_PATH = "./models/layout_structure/model_196000.pth"
 
 
 def get_instance_segmentation_model(num_classes):
     model = torchvision.models.detection.maskrcnn_resnet50_fpn(pretrained=True)
+    device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
+
     in_features = model.roi_heads.box_predictor.cls_score.in_features
     model.roi_heads.box_predictor = FastRCNNPredictor(in_features, num_classes)
     in_features_mask = model.roi_heads.mask_predictor.conv5_mask.in_channels
@@ -34,35 +36,42 @@ def get_instance_segmentation_model(num_classes):
         hidden_layer,
         num_classes
     )
+
+    model=model.to(device)
+    
     return model
 
 # Load model
 model = get_instance_segmentation_model(NUM_CLASSES)
-model.cuda()
+
+
+# model=model.to(device)
 
 # Load checkpoint
 checkpoint_path = MODEL_PATH
 checkpoint = torch.load(checkpoint_path, map_location='cpu')
 
-test_datas = image_utils.load_datasets('./datasets/document_classify/test')
+model.load_state_dict(checkpoint['model'])
+model.eval()
+
+test_datas = image_utils.load_datasets('.\\datasets\\document_classify\\test')
 
 
-for file_path in test_datas:
-    image = image_utils.load_image_transform(file_path)
-    with torch.no_grad():
-        prediction = model([image.cuda()])
-        prediction = model([image])
+image = image_utils.load_image_transform('./datasets/document_classify/test/pi.PNG')
+with torch.no_grad():
+    # prediction = model([image.cuda()])
+    prediction = model([image])
 
-    image = torch.squeeze(image, 0).permute(1, 2, 0).mul(255).numpy().astype(np.uint8)
+image = torch.squeeze(image, 0).permute(1, 2, 0).mul(255).numpy().astype(np.uint8)
 
-    for pred in prediction:
-        for idx, mask in enumerate(pred['masks']):
-            if pred['scores'][idx].item() < 0.7:
-                continue
-            m = mask[0].mul(255).byte().cpu().numpy()
-            box = list(map(int, pred["boxes"][idx].tolist()))
-            label = CATEGORIES2LABELS[pred["labels"][idx].item()]
-            score = pred["scores"][idx].item()
-            image = overlay_mask(image, m)
-            image = overlay_ann(image, m, box, label, score)
-    show(image)
+for pred in prediction:
+    for idx, mask in enumerate(pred['masks']):
+        if pred['scores'][idx].item() < 0.7:
+            continue
+        m = mask[0].mul(255).byte().cpu().numpy()
+        box = list(map(int, pred["boxes"][idx].tolist()))
+        label = CATEGORIES2LABELS[pred["labels"][idx].item()]
+        score = pred["scores"][idx].item()
+        image = overlay_mask(image, m)
+        # image = overlay_ann(image, m, box, label, score)
+show(image)

@@ -2,7 +2,7 @@ import glob
 import cv2
 from torchvision.transforms import transforms
 
-def load_datasets(path: str, type: str ='/*'):
+def load_datasets(path: str, type: str ='\\*'):
     return glob.glob(path + type)
 
 
