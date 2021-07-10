@@ -17,3 +17,12 @@ opencv-python==4.5.2.54
 fvcore==0.1.5.post20210617
 
 elasticsearch==7.13.2
+
+
+pytesseract==0.3.8
+dpath==2.0.1
+fuzzywuzzy==0.18.0
+vncorenlp==1.0.3
+
+xlrd==2.0.1
+openpyxl==3.0.7
