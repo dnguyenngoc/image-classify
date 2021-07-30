@@ -5,3 +5,6 @@ _old
 .vscode
 *.pth
 pytorch_model.bin
+
+# notebook checkpoint
+.ipynb_checkpoints
