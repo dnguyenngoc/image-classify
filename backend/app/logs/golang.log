@@ -1,0 +1,963 @@
+2021-07-30 12:30:08,790 - INFO - Started server process [3380]
+2021-07-30 12:30:08,790 - INFO - Waiting for application startup.
+2021-07-30 12:30:08,791 - INFO - Application startup complete.
+2021-07-30 12:30:08,792 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-07-30 12:30:47,170 - INFO - Shutting down
+2021-07-30 12:30:47,279 - INFO - Waiting for application shutdown.
+2021-07-30 12:30:47,280 - INFO - Application shutdown complete.
+2021-07-30 12:30:47,281 - INFO - Finished server process [3380]
+2021-07-30 12:30:49,383 - INFO - Started server process [11944]
+2021-07-30 12:30:49,383 - INFO - Waiting for application startup.
+2021-07-30 12:30:49,384 - INFO - Application startup complete.
+2021-07-30 12:30:49,385 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-07-30 12:33:11,191 - INFO - Shutting down
+2021-07-30 12:33:11,301 - INFO - Waiting for application shutdown.
+2021-07-30 12:33:11,302 - INFO - Application shutdown complete.
+2021-07-30 12:33:11,303 - INFO - Finished server process [11944]
+2021-07-30 14:04:33,955 - INFO - Started server process [6564]
+2021-07-30 14:04:33,956 - INFO - Waiting for application startup.
+2021-07-30 14:04:33,957 - INFO - Application startup complete.
+2021-07-30 14:04:33,958 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-07-30 14:06:00,618 - INFO - Shutting down
+2021-07-30 14:06:00,730 - INFO - Waiting for application shutdown.
+2021-07-30 14:06:00,731 - INFO - Application shutdown complete.
+2021-07-30 14:06:00,731 - INFO - Finished server process [6564]
+2021-07-30 14:06:43,155 - INFO - Started server process [792]
+2021-07-30 14:06:43,156 - INFO - Waiting for application startup.
+2021-07-30 14:06:43,157 - INFO - Application startup complete.
+2021-07-30 14:06:43,158 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-07-30 14:13:35,594 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 59, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 26, in predict
+    image = scanner.process(byte_file)
+NameError: name 'scanner' is not defined
+2021-07-30 14:14:46,673 - INFO - Shutting down
+2021-07-30 14:14:46,785 - INFO - Finished server process [792]
+2021-07-30 14:14:56,921 - INFO - Started server process [7748]
+2021-07-30 14:14:56,922 - INFO - Waiting for application startup.
+2021-07-30 14:14:56,923 - INFO - Application startup complete.
+2021-07-30 14:14:56,924 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-07-30 14:15:01,255 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 59, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 26, in predict
+    image = scanner.process(byte_file)
+NameError: name 'scanner' is not defined
+2021-07-30 14:15:14,408 - INFO - Shutting down
+2021-07-30 14:15:14,520 - INFO - Waiting for application shutdown.
+2021-07-30 14:15:14,520 - INFO - Application shutdown complete.
+2021-07-30 14:15:14,521 - INFO - Finished server process [7748]
+2021-07-30 14:19:07,091 - INFO - Started server process [16436]
+2021-07-30 14:19:07,093 - INFO - Waiting for application startup.
+2021-07-30 14:19:10,059 - ERROR - Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 526, in lifespan
+    async for item in self.lifespan_context(app):
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 467, in default_lifespan
+    await self.startup()
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 502, in startup
+    await handler()
+  File "E:\Github\image-classify\backend\app\main.py", line 69, in startup_event
+    scanner = scanner.ScannerFindContours()
+UnboundLocalError: local variable 'scanner' referenced before assignment
+
+2021-07-30 14:19:10,129 - ERROR - Application startup failed. Exiting.
+2021-07-30 14:19:35,870 - INFO - Started server process [11608]
+2021-07-30 14:19:35,873 - INFO - Waiting for application startup.
+2021-07-30 14:19:35,874 - INFO - Application startup complete.
+2021-07-30 14:19:35,875 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-07-30 14:19:38,553 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 59, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 26, in predict
+    image = scanner.process(byte_file)
+NameError: name 'scanner' is not defined
+2021-07-30 14:25:44,525 - INFO - Shutting down
+2021-07-30 14:25:44,637 - INFO - Waiting for application shutdown.
+2021-07-30 14:25:44,637 - INFO - Application shutdown complete.
+2021-07-30 14:25:44,638 - INFO - Finished server process [11608]
+2021-07-30 14:25:51,778 - INFO - Started server process [17704]
+2021-07-30 14:25:51,779 - INFO - Waiting for application startup.
+2021-07-30 14:25:51,780 - INFO - Application startup complete.
+2021-07-30 14:25:51,781 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-07-30 14:25:54,078 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 59, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 26, in predict
+    image = scanner.process(byte_file)
+NameError: name 'scanner' is not defined
+2021-07-30 14:26:25,969 - INFO - Shutting down
+2021-07-30 14:26:26,081 - INFO - Waiting for application shutdown.
+2021-07-30 14:26:26,081 - INFO - Application shutdown complete.
+2021-07-30 14:26:26,082 - INFO - Finished server process [17704]
+2021-07-30 14:33:13,592 - INFO - Started server process [16608]
+2021-07-30 14:33:13,594 - INFO - Waiting for application startup.
+2021-07-30 14:33:13,595 - INFO - Application startup complete.
+2021-07-30 14:33:13,597 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-07-30 14:33:16,053 - INFO - Shutting down
+2021-07-30 14:33:16,165 - INFO - Waiting for application shutdown.
+2021-07-30 14:33:16,165 - INFO - Application shutdown complete.
+2021-07-30 14:33:16,166 - INFO - Finished server process [16608]
+2021-07-30 14:34:09,327 - INFO - Started server process [14776]
+2021-07-30 14:34:09,328 - INFO - Waiting for application startup.
+2021-07-30 14:34:09,330 - INFO - Application startup complete.
+2021-07-30 14:34:09,331 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-07-30 14:34:16,218 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 59, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 26, in predict
+    image = scanner.process(byte_file)
+NameError: name 'scanner' is not defined
+2021-07-30 14:36:57,547 - INFO - Shutting down
+2021-07-30 14:36:57,659 - INFO - Waiting for application shutdown.
+2021-07-30 14:36:57,659 - INFO - Application shutdown complete.
+2021-07-30 14:36:57,660 - INFO - Finished server process [14776]
+2021-07-30 14:37:04,856 - INFO - Started server process [10320]
+2021-07-30 14:37:04,860 - INFO - Waiting for application startup.
+2021-07-30 14:37:04,864 - INFO - Application startup complete.
+2021-07-30 14:37:04,865 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-07-30 14:37:11,287 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 26, in predict
+    image = scanner.process(byte_file)
+  File "E:\Github\image-classify\backend\app\helpers\scanner.py", line 99, in process
+    image_gray_origin = self.gray(image)
+  File "E:\Github\image-classify\backend\app\helpers\scanner.py", line 27, in gray
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+cv2.error: OpenCV(4.5.3) :-1: error: (-5:Bad argument) in function 'cvtColor'
+> Overload resolution failed:
+>  - src is not a numpy array, neither a scalar
+>  - Expected Ptr<cv::UMat> for argument 'src'
+
+2021-07-30 14:41:14,142 - INFO - Shutting down
+2021-07-30 14:41:14,253 - INFO - Waiting for application shutdown.
+2021-07-30 14:41:14,255 - INFO - Application shutdown complete.
+2021-07-30 14:41:14,256 - INFO - Finished server process [10320]
+2021-07-30 14:41:21,670 - INFO - Started server process [17676]
+2021-07-30 14:41:21,672 - INFO - Waiting for application startup.
+2021-07-30 14:41:21,672 - INFO - Application startup complete.
+2021-07-30 14:41:21,674 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-07-30 14:41:23,159 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 29, in predict
+    image = cv2.imdecode(np.frombuffer(byte_file, np.uint8), 1)
+NameError: name 'np' is not defined
+2021-07-30 14:41:34,954 - INFO - Shutting down
+2021-07-30 14:41:35,066 - INFO - Waiting for application shutdown.
+2021-07-30 14:41:35,066 - INFO - Application shutdown complete.
+2021-07-30 14:41:35,067 - INFO - Finished server process [17676]
+2021-07-30 14:41:41,978 - INFO - Started server process [16968]
+2021-07-30 14:41:41,983 - INFO - Waiting for application startup.
+2021-07-30 14:41:41,984 - INFO - Application startup complete.
+2021-07-30 14:41:41,985 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-07-30 14:41:50,912 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 34, in predict
+    text = tesseract.excecute(image)
+  File "E:\Github\image-classify\backend\app\helpers\tesseract_utils.py", line 11, in excecute
+    return pytesseract.image_to_string(gray, lang='vie', config='--psm 6')
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 413, in image_to_string
+    return {
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 416, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 284, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 256, in run_tesseract
+    raise TesseractNotFoundError()
+pytesseract.pytesseract.TesseractNotFoundError: tesseract is not installed or it's not in your PATH. See README file for more information.
+2021-07-30 15:16:05,774 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 34, in predict
+    text = tesseract.excecute(image)
+  File "E:\Github\image-classify\backend\app\helpers\tesseract_utils.py", line 11, in excecute
+    return pytesseract.image_to_string(gray, lang='vie', config='--psm 6')
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 413, in image_to_string
+    return {
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 416, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 284, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 256, in run_tesseract
+    raise TesseractNotFoundError()
+pytesseract.pytesseract.TesseractNotFoundError: tesseract is not installed or it's not in your PATH. See README file for more information.
+2021-07-30 16:25:41,983 - INFO - Shutting down
+2021-07-30 16:25:42,095 - INFO - Waiting for application shutdown.
+2021-07-30 16:25:42,095 - INFO - Application shutdown complete.
+2021-07-30 16:25:42,096 - INFO - Finished server process [16968]
+2021-07-30 16:25:51,110 - INFO - Started server process [6552]
+2021-07-30 16:25:51,112 - INFO - Waiting for application startup.
+2021-07-30 16:25:51,113 - INFO - Application startup complete.
+2021-07-30 16:25:51,116 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-07-30 16:25:54,286 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 34, in predict
+    text = tesseract.excecute(image)
+  File "E:\Github\image-classify\backend\app\helpers\tesseract_utils.py", line 11, in excecute
+    return pytesseract.image_to_string(gray, lang='vie', config='--psm 6')
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 413, in image_to_string
+    return {
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 416, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 284, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 256, in run_tesseract
+    raise TesseractNotFoundError()
+pytesseract.pytesseract.TesseractNotFoundError: tesseract is not installed or it's not in your PATH. See README file for more information.
+2021-07-30 16:25:59,966 - INFO - Shutting down
+2021-07-30 16:26:00,076 - INFO - Waiting for application shutdown.
+2021-07-30 16:26:00,076 - INFO - Application shutdown complete.
+2021-07-30 16:26:00,077 - INFO - Finished server process [6552]
+2021-07-30 16:27:26,374 - INFO - Started server process [8544]
+2021-07-30 16:27:26,376 - INFO - Waiting for application startup.
+2021-07-30 16:27:26,376 - INFO - Application startup complete.
+2021-07-30 16:27:26,384 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-07-30 16:27:31,096 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 34, in predict
+    text = tesseract.excecute(image)
+  File "E:\Github\image-classify\backend\app\helpers\tesseract_utils.py", line 11, in excecute
+    return pytesseract.image_to_string(gray, lang='vie', config='--psm 6')
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 413, in image_to_string
+    return {
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 416, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 284, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 260, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (1, 'Error opening data file C:\\Program Files (x86)\\Tesseract-OCR\\tessdata/vie.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to the parent directory of your "tessdata" directory. Failed loading language \'vie\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
+2021-07-30 16:28:55,969 - INFO - Shutting down
+2021-07-30 16:28:56,064 - INFO - Waiting for application shutdown.
+2021-07-30 16:28:56,064 - INFO - Application shutdown complete.
+2021-07-30 16:28:56,065 - INFO - Finished server process [8544]
+2021-07-30 16:29:03,237 - INFO - Started server process [6200]
+2021-07-30 16:29:03,240 - INFO - Waiting for application startup.
+2021-07-30 16:29:03,242 - INFO - Application startup complete.
+2021-07-30 16:29:03,244 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-07-30 16:29:09,677 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 34, in predict
+    text = tesseract.excecute(image)
+  File "E:\Github\image-classify\backend\app\helpers\tesseract_utils.py", line 11, in excecute
+    return pytesseract.image_to_string(gray, lang='vie', config='--psm 6')
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 413, in image_to_string
+    return {
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 416, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 284, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 260, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (3221225477, '')
+2021-07-30 16:33:34,964 - INFO - Shutting down
+2021-07-30 16:33:35,075 - INFO - Finished server process [6200]
+2021-07-30 16:33:35,139 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000002239ED5CFA0>()]>>
+2021-07-30 16:33:35,139 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-07-30 16:33:44,037 - INFO - Started server process [1408]
+2021-07-30 16:33:44,044 - INFO - Waiting for application startup.
+2021-07-30 16:33:44,046 - INFO - Application startup complete.
+2021-07-30 16:33:44,048 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-07-30 16:33:51,818 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 34, in predict
+    text = tesseract.excecute(image)
+  File "E:\Github\image-classify\backend\app\helpers\tesseract_utils.py", line 11, in excecute
+    return pytesseract.image_to_string(gray, lang='vie', config='--psm 6')
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 413, in image_to_string
+    return {
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 416, in <lambda>
+    Output.STRING: lambda: run_and_get_output(*args),
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 284, in run_and_get_output
+    run_tesseract(**kwargs)
+  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 260, in run_tesseract
+    raise TesseractError(proc.returncode, get_errors(error_string))
+pytesseract.pytesseract.TesseractError: (3221225477, '')
+2021-07-30 16:34:13,463 - INFO - Shutting down
+2021-07-30 16:34:13,574 - INFO - Waiting for application shutdown.
+2021-07-30 16:34:13,574 - INFO - Application shutdown complete.
+2021-07-30 16:34:13,575 - INFO - Finished server process [1408]
+2021-07-30 16:34:21,820 - INFO - Started server process [10332]
+2021-07-30 16:34:21,827 - INFO - Waiting for application startup.
+2021-07-30 16:34:21,830 - INFO - Application startup complete.
+2021-07-30 16:34:21,833 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-07-30 16:34:26,383 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 209, in app
+    response_data = await serialize_response(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 137, in serialize_response
+    return jsonable_encoder(response_content)
+  File "F:\Tool\Python\lib\site-packages\fastapi\encoders.py", line 141, in jsonable_encoder
+    raise ValueError(errors)
+ValueError: [ValueError('dictionary update sequence element #0 has length 1032; 2 is required'), TypeError('vars() argument must have __dict__ attribute')]
+2021-07-30 16:34:51,407 - INFO - Shutting down
+2021-07-30 16:34:51,519 - INFO - Finished server process [10332]
+2021-07-30 16:34:51,600 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x0000022C96A6DFA0>()]>>
+2021-07-30 16:34:51,601 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-07-30 16:35:00,777 - INFO - Started server process [5692]
+2021-07-30 16:35:00,779 - INFO - Waiting for application startup.
+2021-07-30 16:35:00,787 - INFO - Application startup complete.
+2021-07-30 16:35:00,789 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-07-30 16:35:02,738 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 209, in app
+    response_data = await serialize_response(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 137, in serialize_response
+    return jsonable_encoder(response_content)
+  File "F:\Tool\Python\lib\site-packages\fastapi\encoders.py", line 127, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+  File "pydantic\json.py", line 51, in pydantic.json.lambda
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+2021-07-30 16:35:27,068 - INFO - Shutting down
+2021-07-30 16:35:27,211 - INFO - Finished server process [5692]
+2021-07-30 16:35:27,276 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x0000019B8EF0CFA0>()]>>
+2021-07-30 16:35:27,277 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-07-30 16:35:35,413 - INFO - Started server process [3900]
+2021-07-30 16:35:35,416 - INFO - Waiting for application startup.
+2021-07-30 16:35:35,417 - INFO - Application startup complete.
+2021-07-30 16:35:35,419 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-07-30 16:36:00,074 - INFO - Shutting down
+2021-07-30 16:36:00,185 - INFO - Waiting for application shutdown.
+2021-07-30 16:36:00,185 - INFO - Application shutdown complete.
+2021-07-30 16:36:00,186 - INFO - Finished server process [3900]

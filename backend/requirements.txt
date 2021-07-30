@@ -1,0 +1,36 @@
+# backports.lzma==0.0.14
+# tensorflow-gpu==2.5.0
+# tensorflow_datasets==4.3.0
+# pandas==1.2.4
+# numpy==1.19.5
+# ijson==3.1.4
+# sty==1.0.0rc1
+# matplotlib==3.4.2
+# fvcore==0.1.5.post20210617
+# dpath==2.0.1
+# fuzzywuzzy==0.18.0
+# vncorenlp==1.0.3
+# xlrd==2.0.1
+# openpyxl==3.0.7
+
+# Fast API
+uvicorn==0.13.4
+fastapi==0.63.0
+python-multipart==0.0.5
+psycopg2-binary==2.8.6
+configparser==5.0.2
+passlib==1.7.4
+python-jose==3.2.0
+pycryptodome==3.10.1
+alembic==1.6.5
+datetime==4.3
+
+# Deep Learning document classify
+elasticsearch==7.13.4
+nltk==3.6.2
+transformers==4.9.1
+torchvision==0.10.0
+pytesseract==0.3.8
+opencv-python==4.5.3.56
+pythonRLSA==1.0.0
+scikit-learn==0.24.2
