@@ -1,10 +1,8 @@
-# datasets
-__pycache__
-elasticsearch
-_old
-.vscode
-*.pth
-pytorch_model.bin
-
-# notebook checkpoint
+notebooks
 .ipynb_checkpoints
+
+__pycache__
+
+models
+
+env-stag.ini
