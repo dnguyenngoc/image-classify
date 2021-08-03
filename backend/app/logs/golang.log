@@ -1,337 +1,16 @@
-2021-07-30 12:30:08,790 - INFO - Started server process [3380]
-2021-07-30 12:30:08,790 - INFO - Waiting for application startup.
-2021-07-30 12:30:08,791 - INFO - Application startup complete.
-2021-07-30 12:30:08,792 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
-2021-07-30 12:30:47,170 - INFO - Shutting down
-2021-07-30 12:30:47,279 - INFO - Waiting for application shutdown.
-2021-07-30 12:30:47,280 - INFO - Application shutdown complete.
-2021-07-30 12:30:47,281 - INFO - Finished server process [3380]
-2021-07-30 12:30:49,383 - INFO - Started server process [11944]
-2021-07-30 12:30:49,383 - INFO - Waiting for application startup.
-2021-07-30 12:30:49,384 - INFO - Application startup complete.
-2021-07-30 12:30:49,385 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
-2021-07-30 12:33:11,191 - INFO - Shutting down
-2021-07-30 12:33:11,301 - INFO - Waiting for application shutdown.
-2021-07-30 12:33:11,302 - INFO - Application shutdown complete.
-2021-07-30 12:33:11,303 - INFO - Finished server process [11944]
-2021-07-30 14:04:33,955 - INFO - Started server process [6564]
-2021-07-30 14:04:33,956 - INFO - Waiting for application startup.
-2021-07-30 14:04:33,957 - INFO - Application startup complete.
-2021-07-30 14:04:33,958 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
-2021-07-30 14:06:00,618 - INFO - Shutting down
-2021-07-30 14:06:00,730 - INFO - Waiting for application shutdown.
-2021-07-30 14:06:00,731 - INFO - Application shutdown complete.
-2021-07-30 14:06:00,731 - INFO - Finished server process [6564]
-2021-07-30 14:06:43,155 - INFO - Started server process [792]
-2021-07-30 14:06:43,156 - INFO - Waiting for application startup.
-2021-07-30 14:06:43,157 - INFO - Application startup complete.
-2021-07-30 14:06:43,158 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
-2021-07-30 14:13:35,594 - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
-    return await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
-    await self.app(scope, receive, inner_send)
-  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
-    await super().__call__(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
-    response = await self.dispatch_func(request, self.call_next)
-  File "E:\Github\image-classify\backend\app\main.py", line 59, in db_session_middleware
-    response = await call_next(request)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
-    task.result()
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
-    await route.handle(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
-    response = await func(request)
-  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
-    raw_response = await run_endpoint_function(
-  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
-    return await run_in_threadpool(dependant.call, **values)
-  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
-    return await loop.run_in_executor(None, func, *args)
-  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 26, in predict
-    image = scanner.process(byte_file)
-NameError: name 'scanner' is not defined
-2021-07-30 14:14:46,673 - INFO - Shutting down
-2021-07-30 14:14:46,785 - INFO - Finished server process [792]
-2021-07-30 14:14:56,921 - INFO - Started server process [7748]
-2021-07-30 14:14:56,922 - INFO - Waiting for application startup.
-2021-07-30 14:14:56,923 - INFO - Application startup complete.
-2021-07-30 14:14:56,924 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
-2021-07-30 14:15:01,255 - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
-    return await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
-    await self.app(scope, receive, inner_send)
-  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
-    await super().__call__(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
-    response = await self.dispatch_func(request, self.call_next)
-  File "E:\Github\image-classify\backend\app\main.py", line 59, in db_session_middleware
-    response = await call_next(request)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
-    task.result()
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
-    await route.handle(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
-    response = await func(request)
-  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
-    raw_response = await run_endpoint_function(
-  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
-    return await run_in_threadpool(dependant.call, **values)
-  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
-    return await loop.run_in_executor(None, func, *args)
-  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 26, in predict
-    image = scanner.process(byte_file)
-NameError: name 'scanner' is not defined
-2021-07-30 14:15:14,408 - INFO - Shutting down
-2021-07-30 14:15:14,520 - INFO - Waiting for application shutdown.
-2021-07-30 14:15:14,520 - INFO - Application shutdown complete.
-2021-07-30 14:15:14,521 - INFO - Finished server process [7748]
-2021-07-30 14:19:07,091 - INFO - Started server process [16436]
-2021-07-30 14:19:07,093 - INFO - Waiting for application startup.
-2021-07-30 14:19:10,059 - ERROR - Traceback (most recent call last):
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 526, in lifespan
-    async for item in self.lifespan_context(app):
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 467, in default_lifespan
-    await self.startup()
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 502, in startup
-    await handler()
-  File "E:\Github\image-classify\backend\app\main.py", line 69, in startup_event
-    scanner = scanner.ScannerFindContours()
-UnboundLocalError: local variable 'scanner' referenced before assignment
-
-2021-07-30 14:19:10,129 - ERROR - Application startup failed. Exiting.
-2021-07-30 14:19:35,870 - INFO - Started server process [11608]
-2021-07-30 14:19:35,873 - INFO - Waiting for application startup.
-2021-07-30 14:19:35,874 - INFO - Application startup complete.
-2021-07-30 14:19:35,875 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
-2021-07-30 14:19:38,553 - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
-    return await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
-    await self.app(scope, receive, inner_send)
-  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
-    await super().__call__(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
-    response = await self.dispatch_func(request, self.call_next)
-  File "E:\Github\image-classify\backend\app\main.py", line 59, in db_session_middleware
-    response = await call_next(request)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
-    task.result()
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
-    await route.handle(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
-    response = await func(request)
-  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
-    raw_response = await run_endpoint_function(
-  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
-    return await run_in_threadpool(dependant.call, **values)
-  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
-    return await loop.run_in_executor(None, func, *args)
-  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 26, in predict
-    image = scanner.process(byte_file)
-NameError: name 'scanner' is not defined
-2021-07-30 14:25:44,525 - INFO - Shutting down
-2021-07-30 14:25:44,637 - INFO - Waiting for application shutdown.
-2021-07-30 14:25:44,637 - INFO - Application shutdown complete.
-2021-07-30 14:25:44,638 - INFO - Finished server process [11608]
-2021-07-30 14:25:51,778 - INFO - Started server process [17704]
-2021-07-30 14:25:51,779 - INFO - Waiting for application startup.
-2021-07-30 14:25:51,780 - INFO - Application startup complete.
-2021-07-30 14:25:51,781 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
-2021-07-30 14:25:54,078 - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
-    return await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
-    await self.app(scope, receive, inner_send)
-  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
-    await super().__call__(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
-    response = await self.dispatch_func(request, self.call_next)
-  File "E:\Github\image-classify\backend\app\main.py", line 59, in db_session_middleware
-    response = await call_next(request)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
-    task.result()
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
-    await route.handle(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
-    response = await func(request)
-  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
-    raw_response = await run_endpoint_function(
-  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
-    return await run_in_threadpool(dependant.call, **values)
-  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
-    return await loop.run_in_executor(None, func, *args)
-  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 26, in predict
-    image = scanner.process(byte_file)
-NameError: name 'scanner' is not defined
-2021-07-30 14:26:25,969 - INFO - Shutting down
-2021-07-30 14:26:26,081 - INFO - Waiting for application shutdown.
-2021-07-30 14:26:26,081 - INFO - Application shutdown complete.
-2021-07-30 14:26:26,082 - INFO - Finished server process [17704]
-2021-07-30 14:33:13,592 - INFO - Started server process [16608]
-2021-07-30 14:33:13,594 - INFO - Waiting for application startup.
-2021-07-30 14:33:13,595 - INFO - Application startup complete.
-2021-07-30 14:33:13,597 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
-2021-07-30 14:33:16,053 - INFO - Shutting down
-2021-07-30 14:33:16,165 - INFO - Waiting for application shutdown.
-2021-07-30 14:33:16,165 - INFO - Application shutdown complete.
-2021-07-30 14:33:16,166 - INFO - Finished server process [16608]
-2021-07-30 14:34:09,327 - INFO - Started server process [14776]
-2021-07-30 14:34:09,328 - INFO - Waiting for application startup.
-2021-07-30 14:34:09,330 - INFO - Application startup complete.
-2021-07-30 14:34:09,331 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
-2021-07-30 14:34:16,218 - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
-    return await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
-    await self.app(scope, receive, inner_send)
-  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
-    await super().__call__(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
-    response = await self.dispatch_func(request, self.call_next)
-  File "E:\Github\image-classify\backend\app\main.py", line 59, in db_session_middleware
-    response = await call_next(request)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
-    task.result()
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
-    await route.handle(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
-    response = await func(request)
-  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
-    raw_response = await run_endpoint_function(
-  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
-    return await run_in_threadpool(dependant.call, **values)
-  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
-    return await loop.run_in_executor(None, func, *args)
-  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 26, in predict
-    image = scanner.process(byte_file)
-NameError: name 'scanner' is not defined
-2021-07-30 14:36:57,547 - INFO - Shutting down
-2021-07-30 14:36:57,659 - INFO - Waiting for application shutdown.
-2021-07-30 14:36:57,659 - INFO - Application shutdown complete.
-2021-07-30 14:36:57,660 - INFO - Finished server process [14776]
-2021-07-30 14:37:04,856 - INFO - Started server process [10320]
-2021-07-30 14:37:04,860 - INFO - Waiting for application startup.
-2021-07-30 14:37:04,864 - INFO - Application startup complete.
-2021-07-30 14:37:04,865 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
-2021-07-30 14:37:11,287 - ERROR - Exception in ASGI application
+2021-08-03 12:32:15,541 - INFO - Started server process [11868]
+2021-08-03 12:32:15,543 - INFO - Waiting for application startup.
+2021-08-03 12:32:15,545 - INFO - Application startup complete.
+2021-08-03 12:32:15,548 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:05:27,625 - INFO - Shutting down
+2021-08-03 13:05:27,735 - INFO - Waiting for application shutdown.
+2021-08-03 13:05:27,736 - INFO - Application shutdown complete.
+2021-08-03 13:05:27,736 - INFO - Finished server process [11868]
+2021-08-03 13:06:04,554 - INFO - Started server process [10344]
+2021-08-03 13:06:04,556 - INFO - Waiting for application startup.
+2021-08-03 13:06:04,557 - INFO - Application startup complete.
+2021-08-03 13:06:04,558 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:07:00,837 - ERROR - Exception in ASGI application
 Traceback (most recent call last):
   File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
     result = await app(self.scope, self.receive, self.send)
@@ -377,26 +56,91 @@ Traceback (most recent call last):
     return await loop.run_in_executor(None, func, *args)
   File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
     result = self.fn(*self.args, **self.kwargs)
-  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 26, in predict
-    image = scanner.process(byte_file)
-  File "E:\Github\image-classify\backend\app\helpers\scanner.py", line 99, in process
-    image_gray_origin = self.gray(image)
-  File "E:\Github\image-classify\backend\app\helpers\scanner.py", line 27, in gray
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-cv2.error: OpenCV(4.5.3) :-1: error: (-5:Bad argument) in function 'cvtColor'
-> Overload resolution failed:
->  - src is not a numpy array, neither a scalar
->  - Expected Ptr<cv::UMat> for argument 'src'
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 33, in predict
+    rects, confidences, rW, rH =east.get_text(image)
+  File "E:\Github\image-classify\backend\app\helpers\east_opencv.py", line 52, in get_text
+    (scores, geometry) = self.net.forward(layerNames)
+cv2.error: OpenCV(4.5.3) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-sn_xpupm\opencv\modules\dnn\src\layers\convolution_layer.cpp:386: error: (-2:Unspecified error) Number of input channels should be multiple of 3 but got 1 in function 'cv::dnn::ConvolutionLayerImpl::getMemoryShapes'
 
-2021-07-30 14:41:14,142 - INFO - Shutting down
-2021-07-30 14:41:14,253 - INFO - Waiting for application shutdown.
-2021-07-30 14:41:14,255 - INFO - Application shutdown complete.
-2021-07-30 14:41:14,256 - INFO - Finished server process [10320]
-2021-07-30 14:41:21,670 - INFO - Started server process [17676]
-2021-07-30 14:41:21,672 - INFO - Waiting for application startup.
-2021-07-30 14:41:21,672 - INFO - Application startup complete.
-2021-07-30 14:41:21,674 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
-2021-07-30 14:41:23,159 - ERROR - Exception in ASGI application
+2021-08-03 13:08:54,951 - INFO - Shutting down
+2021-08-03 13:08:55,063 - INFO - Waiting for application shutdown.
+2021-08-03 13:08:55,064 - INFO - Application shutdown complete.
+2021-08-03 13:08:55,065 - INFO - Finished server process [10344]
+2021-08-03 13:09:07,227 - INFO - Started server process [3812]
+2021-08-03 13:09:07,231 - INFO - Waiting for application startup.
+2021-08-03 13:09:07,232 - INFO - Application startup complete.
+2021-08-03 13:09:07,235 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:11:05,183 - INFO - Shutting down
+2021-08-03 13:11:05,295 - INFO - Waiting for application shutdown.
+2021-08-03 13:11:05,296 - INFO - Application shutdown complete.
+2021-08-03 13:11:05,296 - INFO - Finished server process [3812]
+2021-08-03 13:11:14,954 - INFO - Started server process [2624]
+2021-08-03 13:11:14,956 - INFO - Waiting for application startup.
+2021-08-03 13:11:14,957 - INFO - Application startup complete.
+2021-08-03 13:11:14,958 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:11:18,314 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 209, in app
+    response_data = await serialize_response(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 137, in serialize_response
+    return jsonable_encoder(response_content)
+  File "F:\Tool\Python\lib\site-packages\fastapi\encoders.py", line 141, in jsonable_encoder
+    raise ValueError(errors)
+ValueError: [ValueError('dictionary update sequence element #0 has length 1032; 2 is required'), TypeError('vars() argument must have __dict__ attribute')]
+2021-08-03 13:11:43,878 - INFO - Shutting down
+2021-08-03 13:11:43,987 - INFO - Finished server process [2624]
+2021-08-03 13:11:44,095 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000002A4063AF280>()]>>
+2021-08-03 13:11:44,095 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-08-03 13:11:53,724 - INFO - Started server process [9528]
+2021-08-03 13:11:53,726 - INFO - Waiting for application startup.
+2021-08-03 13:11:53,740 - INFO - Application startup complete.
+2021-08-03 13:11:53,753 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:12:59,772 - INFO - Shutting down
+2021-08-03 13:12:59,881 - INFO - Waiting for application shutdown.
+2021-08-03 13:12:59,881 - INFO - Application shutdown complete.
+2021-08-03 13:12:59,883 - INFO - Finished server process [9528]
+2021-08-03 13:13:10,793 - INFO - Started server process [11256]
+2021-08-03 13:13:10,795 - INFO - Waiting for application startup.
+2021-08-03 13:13:10,797 - INFO - Application startup complete.
+2021-08-03 13:13:10,798 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:13:14,319 - ERROR - Exception in ASGI application
 Traceback (most recent call last):
   File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
     result = await app(self.scope, self.receive, self.send)
@@ -444,16 +188,111 @@ Traceback (most recent call last):
     result = self.fn(*self.args, **self.kwargs)
   File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 29, in predict
     image = cv2.imdecode(np.frombuffer(byte_file, np.uint8), 1)
-NameError: name 'np' is not defined
-2021-07-30 14:41:34,954 - INFO - Shutting down
-2021-07-30 14:41:35,066 - INFO - Waiting for application shutdown.
-2021-07-30 14:41:35,066 - INFO - Application shutdown complete.
-2021-07-30 14:41:35,067 - INFO - Finished server process [17676]
-2021-07-30 14:41:41,978 - INFO - Started server process [16968]
-2021-07-30 14:41:41,983 - INFO - Waiting for application startup.
-2021-07-30 14:41:41,984 - INFO - Application startup complete.
-2021-07-30 14:41:41,985 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
-2021-07-30 14:41:50,912 - ERROR - Exception in ASGI application
+UnboundLocalError: local variable 'cv2' referenced before assignment
+2021-08-03 13:13:26,492 - INFO - Shutting down
+2021-08-03 13:13:26,601 - INFO - Waiting for application shutdown.
+2021-08-03 13:13:26,601 - INFO - Application shutdown complete.
+2021-08-03 13:13:26,601 - INFO - Finished server process [11256]
+2021-08-03 13:13:36,802 - INFO - Started server process [10972]
+2021-08-03 13:13:36,804 - INFO - Waiting for application startup.
+2021-08-03 13:13:36,804 - INFO - Application startup complete.
+2021-08-03 13:13:36,806 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:14:24,564 - INFO - Shutting down
+2021-08-03 13:14:24,675 - INFO - Waiting for application shutdown.
+2021-08-03 13:14:24,676 - INFO - Application shutdown complete.
+2021-08-03 13:14:24,676 - INFO - Finished server process [10972]
+2021-08-03 13:14:34,494 - INFO - Started server process [12260]
+2021-08-03 13:14:34,496 - INFO - Waiting for application startup.
+2021-08-03 13:14:34,497 - INFO - Application startup complete.
+2021-08-03 13:14:34,498 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:15:32,154 - INFO - Shutting down
+2021-08-03 13:15:32,269 - INFO - Waiting for application shutdown.
+2021-08-03 13:15:32,269 - INFO - Application shutdown complete.
+2021-08-03 13:15:32,269 - INFO - Finished server process [12260]
+2021-08-03 13:15:42,509 - INFO - Started server process [804]
+2021-08-03 13:15:42,510 - INFO - Waiting for application startup.
+2021-08-03 13:15:42,512 - INFO - Application startup complete.
+2021-08-03 13:15:42,514 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:17:36,517 - INFO - Shutting down
+2021-08-03 13:17:36,629 - INFO - Finished server process [804]
+2021-08-03 13:17:36,737 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000001BE863B0280>()]>>
+2021-08-03 13:17:36,737 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-08-03 13:17:46,174 - INFO - Started server process [1132]
+2021-08-03 13:17:46,176 - INFO - Waiting for application startup.
+2021-08-03 13:17:46,177 - INFO - Application startup complete.
+2021-08-03 13:17:46,178 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:22:03,346 - INFO - Shutting down
+2021-08-03 13:22:03,458 - INFO - Finished server process [1132]
+2021-08-03 13:22:03,555 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000002352858F280>()]>>
+2021-08-03 13:22:03,555 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-08-03 13:22:13,447 - INFO - Started server process [4108]
+2021-08-03 13:22:13,449 - INFO - Waiting for application startup.
+2021-08-03 13:22:13,450 - INFO - Application startup complete.
+2021-08-03 13:22:13,451 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:22:15,687 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 35, in predict
+    rects, confidences, rW, rH =east.get_text(backtorgb, W, H)
+  File "E:\Github\image-classify\backend\app\helpers\east_opencv.py", line 52, in get_text
+    (scores, geometry) = self.net.forward(layerNames)
+cv2.error: OpenCV(4.5.3) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-sn_xpupm\opencv\modules\dnn\src\layers\concat_layer.cpp:102: error: (-201:Incorrect size of input array) Inconsistent shape for ConcatLayer in function 'cv::dnn::ConcatLayerImpl::getMemoryShapes'
+
+2021-08-03 13:24:15,336 - INFO - Shutting down
+2021-08-03 13:24:15,456 - INFO - Finished server process [4108]
+2021-08-03 13:24:15,557 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x0000020E863C0280>()]>>
+2021-08-03 13:24:15,557 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-08-03 13:24:27,484 - INFO - Started server process [13540]
+2021-08-03 13:24:27,486 - INFO - Waiting for application startup.
+2021-08-03 13:24:27,488 - INFO - Application startup complete.
+2021-08-03 13:24:27,489 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:24:30,516 - ERROR - Exception in ASGI application
 Traceback (most recent call last):
   File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
     result = await app(self.scope, self.receive, self.send)
@@ -500,19 +339,20 @@ Traceback (most recent call last):
   File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
     result = self.fn(*self.args, **self.kwargs)
   File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 34, in predict
-    text = tesseract.excecute(image)
-  File "E:\Github\image-classify\backend\app\helpers\tesseract_utils.py", line 11, in excecute
-    return pytesseract.image_to_string(gray, lang='vie', config='--psm 6')
-  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 413, in image_to_string
-    return {
-  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 416, in <lambda>
-    Output.STRING: lambda: run_and_get_output(*args),
-  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 284, in run_and_get_output
-    run_tesseract(**kwargs)
-  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 256, in run_tesseract
-    raise TesseractNotFoundError()
-pytesseract.pytesseract.TesseractNotFoundError: tesseract is not installed or it's not in your PATH. See README file for more information.
-2021-07-30 15:16:05,774 - ERROR - Exception in ASGI application
+    rects, confidences, rW, rH =east.get_text(backtorgb, 580,340)
+  File "E:\Github\image-classify\backend\app\helpers\east_opencv.py", line 52, in get_text
+    (scores, geometry) = self.net.forward(layerNames)
+cv2.error: OpenCV(4.5.3) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-sn_xpupm\opencv\modules\dnn\src\layers\concat_layer.cpp:102: error: (-201:Incorrect size of input array) Inconsistent shape for ConcatLayer in function 'cv::dnn::ConcatLayerImpl::getMemoryShapes'
+
+2021-08-03 13:25:39,262 - INFO - Shutting down
+2021-08-03 13:25:39,374 - INFO - Waiting for application shutdown.
+2021-08-03 13:25:39,375 - INFO - Application shutdown complete.
+2021-08-03 13:25:39,376 - INFO - Finished server process [13540]
+2021-08-03 13:25:52,481 - INFO - Started server process [1132]
+2021-08-03 13:25:52,482 - INFO - Waiting for application startup.
+2021-08-03 13:25:52,485 - INFO - Application startup complete.
+2021-08-03 13:25:52,486 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:25:55,667 - ERROR - Exception in ASGI application
 Traceback (most recent call last):
   File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
     result = await app(self.scope, self.receive, self.send)
@@ -559,27 +399,20 @@ Traceback (most recent call last):
   File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
     result = self.fn(*self.args, **self.kwargs)
   File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 34, in predict
-    text = tesseract.excecute(image)
-  File "E:\Github\image-classify\backend\app\helpers\tesseract_utils.py", line 11, in excecute
-    return pytesseract.image_to_string(gray, lang='vie', config='--psm 6')
-  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 413, in image_to_string
-    return {
-  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 416, in <lambda>
-    Output.STRING: lambda: run_and_get_output(*args),
-  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 284, in run_and_get_output
-    run_tesseract(**kwargs)
-  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 256, in run_tesseract
-    raise TesseractNotFoundError()
-pytesseract.pytesseract.TesseractNotFoundError: tesseract is not installed or it's not in your PATH. See README file for more information.
-2021-07-30 16:25:41,983 - INFO - Shutting down
-2021-07-30 16:25:42,095 - INFO - Waiting for application shutdown.
-2021-07-30 16:25:42,095 - INFO - Application shutdown complete.
-2021-07-30 16:25:42,096 - INFO - Finished server process [16968]
-2021-07-30 16:25:51,110 - INFO - Started server process [6552]
-2021-07-30 16:25:51,112 - INFO - Waiting for application startup.
-2021-07-30 16:25:51,113 - INFO - Application startup complete.
-2021-07-30 16:25:51,116 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
-2021-07-30 16:25:54,286 - ERROR - Exception in ASGI application
+    rects, confidences, rW, rH =east.get_text(backtorgb)
+  File "E:\Github\image-classify\backend\app\helpers\east_opencv.py", line 52, in get_text
+    (scores, geometry) = self.net.forward(layerNames)
+cv2.error: OpenCV(4.5.3) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-sn_xpupm\opencv\modules\dnn\src\layers\concat_layer.cpp:102: error: (-201:Incorrect size of input array) Inconsistent shape for ConcatLayer in function 'cv::dnn::ConcatLayerImpl::getMemoryShapes'
+
+2021-08-03 13:26:34,826 - INFO - Shutting down
+2021-08-03 13:26:34,932 - INFO - Waiting for application shutdown.
+2021-08-03 13:26:34,933 - INFO - Application shutdown complete.
+2021-08-03 13:26:34,933 - INFO - Finished server process [1132]
+2021-08-03 13:26:45,478 - INFO - Started server process [9424]
+2021-08-03 13:26:45,481 - INFO - Waiting for application startup.
+2021-08-03 13:26:45,483 - INFO - Application startup complete.
+2021-08-03 13:26:45,484 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:26:53,015 - ERROR - Exception in ASGI application
 Traceback (most recent call last):
   File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
     result = await app(self.scope, self.receive, self.send)
@@ -626,27 +459,36 @@ Traceback (most recent call last):
   File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
     result = self.fn(*self.args, **self.kwargs)
   File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 34, in predict
-    text = tesseract.excecute(image)
-  File "E:\Github\image-classify\backend\app\helpers\tesseract_utils.py", line 11, in excecute
-    return pytesseract.image_to_string(gray, lang='vie', config='--psm 6')
-  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 413, in image_to_string
-    return {
-  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 416, in <lambda>
-    Output.STRING: lambda: run_and_get_output(*args),
-  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 284, in run_and_get_output
-    run_tesseract(**kwargs)
-  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 256, in run_tesseract
-    raise TesseractNotFoundError()
-pytesseract.pytesseract.TesseractNotFoundError: tesseract is not installed or it's not in your PATH. See README file for more information.
-2021-07-30 16:25:59,966 - INFO - Shutting down
-2021-07-30 16:26:00,076 - INFO - Waiting for application shutdown.
-2021-07-30 16:26:00,076 - INFO - Application shutdown complete.
-2021-07-30 16:26:00,077 - INFO - Finished server process [6552]
-2021-07-30 16:27:26,374 - INFO - Started server process [8544]
-2021-07-30 16:27:26,376 - INFO - Waiting for application startup.
-2021-07-30 16:27:26,376 - INFO - Application startup complete.
-2021-07-30 16:27:26,384 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
-2021-07-30 16:27:31,096 - ERROR - Exception in ASGI application
+    rects, confidences, rW, rH =east.get_text(backtorgb)
+  File "E:\Github\image-classify\backend\app\helpers\east_opencv.py", line 52, in get_text
+    (scores, geometry) = self.net.forward(layerNames)
+cv2.error: OpenCV(4.5.3) C:\Users\runneradmin\AppData\Local\Temp\pip-req-build-sn_xpupm\opencv\modules\dnn\src\layers\concat_layer.cpp:102: error: (-201:Incorrect size of input array) Inconsistent shape for ConcatLayer in function 'cv::dnn::ConcatLayerImpl::getMemoryShapes'
+
+2021-08-03 13:27:54,673 - INFO - Shutting down
+2021-08-03 13:27:54,785 - INFO - Waiting for application shutdown.
+2021-08-03 13:27:54,786 - INFO - Application shutdown complete.
+2021-08-03 13:27:54,786 - INFO - Finished server process [9424]
+2021-08-03 13:28:05,148 - INFO - Started server process [6312]
+2021-08-03 13:28:05,149 - INFO - Waiting for application startup.
+2021-08-03 13:28:05,150 - INFO - Application startup complete.
+2021-08-03 13:28:05,151 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:37:04,761 - INFO - Shutting down
+2021-08-03 13:37:04,871 - INFO - Waiting for application shutdown.
+2021-08-03 13:37:04,871 - INFO - Application shutdown complete.
+2021-08-03 13:37:04,871 - INFO - Finished server process [6312]
+2021-08-03 13:37:16,492 - INFO - Started server process [11196]
+2021-08-03 13:37:16,495 - INFO - Waiting for application startup.
+2021-08-03 13:37:16,496 - INFO - Application startup complete.
+2021-08-03 13:37:16,501 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:38:50,364 - INFO - Shutting down
+2021-08-03 13:38:50,480 - INFO - Waiting for application shutdown.
+2021-08-03 13:38:50,480 - INFO - Application shutdown complete.
+2021-08-03 13:38:50,480 - INFO - Finished server process [11196]
+2021-08-03 13:39:00,913 - INFO - Started server process [12912]
+2021-08-03 13:39:00,915 - INFO - Waiting for application startup.
+2021-08-03 13:39:00,916 - INFO - Application startup complete.
+2021-08-03 13:39:00,919 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:39:41,872 - ERROR - Exception in ASGI application
 Traceback (most recent call last):
   File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
     result = await app(self.scope, self.receive, self.send)
@@ -692,143 +534,8 @@ Traceback (most recent call last):
     return await loop.run_in_executor(None, func, *args)
   File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
     result = self.fn(*self.args, **self.kwargs)
-  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 34, in predict
-    text = tesseract.excecute(image)
-  File "E:\Github\image-classify\backend\app\helpers\tesseract_utils.py", line 11, in excecute
-    return pytesseract.image_to_string(gray, lang='vie', config='--psm 6')
-  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 413, in image_to_string
-    return {
-  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 416, in <lambda>
-    Output.STRING: lambda: run_and_get_output(*args),
-  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 284, in run_and_get_output
-    run_tesseract(**kwargs)
-  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 260, in run_tesseract
-    raise TesseractError(proc.returncode, get_errors(error_string))
-pytesseract.pytesseract.TesseractError: (1, 'Error opening data file C:\\Program Files (x86)\\Tesseract-OCR\\tessdata/vie.traineddata Please make sure the TESSDATA_PREFIX environment variable is set to the parent directory of your "tessdata" directory. Failed loading language \'vie\' Tesseract couldn\'t load any languages! Could not initialize tesseract.')
-2021-07-30 16:28:55,969 - INFO - Shutting down
-2021-07-30 16:28:56,064 - INFO - Waiting for application shutdown.
-2021-07-30 16:28:56,064 - INFO - Application shutdown complete.
-2021-07-30 16:28:56,065 - INFO - Finished server process [8544]
-2021-07-30 16:29:03,237 - INFO - Started server process [6200]
-2021-07-30 16:29:03,240 - INFO - Waiting for application startup.
-2021-07-30 16:29:03,242 - INFO - Application startup complete.
-2021-07-30 16:29:03,244 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
-2021-07-30 16:29:09,677 - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
-    return await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
-    await self.app(scope, receive, inner_send)
-  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
-    await super().__call__(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
-    response = await self.dispatch_func(request, self.call_next)
-  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
-    response = await call_next(request)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
-    task.result()
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
-    await route.handle(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
-    response = await func(request)
-  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
-    raw_response = await run_endpoint_function(
-  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
-    return await run_in_threadpool(dependant.call, **values)
-  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
-    return await loop.run_in_executor(None, func, *args)
-  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 34, in predict
-    text = tesseract.excecute(image)
-  File "E:\Github\image-classify\backend\app\helpers\tesseract_utils.py", line 11, in excecute
-    return pytesseract.image_to_string(gray, lang='vie', config='--psm 6')
-  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 413, in image_to_string
-    return {
-  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 416, in <lambda>
-    Output.STRING: lambda: run_and_get_output(*args),
-  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 284, in run_and_get_output
-    run_tesseract(**kwargs)
-  File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 260, in run_tesseract
-    raise TesseractError(proc.returncode, get_errors(error_string))
-pytesseract.pytesseract.TesseractError: (3221225477, '')
-2021-07-30 16:33:34,964 - INFO - Shutting down
-2021-07-30 16:33:35,075 - INFO - Finished server process [6200]
-2021-07-30 16:33:35,139 - ERROR - Task was destroyed but it is pending!
-task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000002239ED5CFA0>()]>>
-2021-07-30 16:33:35,139 - INFO - ASGI 'lifespan' protocol appears unsupported.
-2021-07-30 16:33:44,037 - INFO - Started server process [1408]
-2021-07-30 16:33:44,044 - INFO - Waiting for application startup.
-2021-07-30 16:33:44,046 - INFO - Application startup complete.
-2021-07-30 16:33:44,048 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
-2021-07-30 16:33:51,818 - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
-    return await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
-    await self.app(scope, receive, inner_send)
-  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
-    await super().__call__(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
-    response = await self.dispatch_func(request, self.call_next)
-  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
-    response = await call_next(request)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
-    task.result()
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
-    raise exc from None
-  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
-    await route.handle(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
-    await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
-    response = await func(request)
-  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
-    raw_response = await run_endpoint_function(
-  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
-    return await run_in_threadpool(dependant.call, **values)
-  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
-    return await loop.run_in_executor(None, func, *args)
-  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
-    result = self.fn(*self.args, **self.kwargs)
-  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 34, in predict
-    text = tesseract.excecute(image)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 38, in predict
+    text += ' ' + tesseract.excecute(item)
   File "E:\Github\image-classify\backend\app\helpers\tesseract_utils.py", line 11, in excecute
     return pytesseract.image_to_string(gray, lang='vie', config='--psm 6')
   File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 413, in image_to_string
@@ -839,16 +546,24 @@ Traceback (most recent call last):
     run_tesseract(**kwargs)
   File "F:\Tool\Python\lib\site-packages\pytesseract\pytesseract.py", line 260, in run_tesseract
     raise TesseractError(proc.returncode, get_errors(error_string))
-pytesseract.pytesseract.TesseractError: (3221225477, '')
-2021-07-30 16:34:13,463 - INFO - Shutting down
-2021-07-30 16:34:13,574 - INFO - Waiting for application shutdown.
-2021-07-30 16:34:13,574 - INFO - Application shutdown complete.
-2021-07-30 16:34:13,575 - INFO - Finished server process [1408]
-2021-07-30 16:34:21,820 - INFO - Started server process [10332]
-2021-07-30 16:34:21,827 - INFO - Waiting for application startup.
-2021-07-30 16:34:21,830 - INFO - Application startup complete.
-2021-07-30 16:34:21,833 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
-2021-07-30 16:34:26,383 - ERROR - Exception in ASGI application
+pytesseract.pytesseract.TesseractError: (3221225786, 'ObjectCache(000000006333a700)::~ObjectCache(): WARNING! LEAK! object 00000000060de790 still has count 1 (id F:\\Tool\\Tesseract-OCR\\tessdata/vie.traineddatapunc-dawg) ObjectCache(000000006333a700)::~ObjectCache(): WARNING! LEAK! object 00000000060de5d0 still has count 1 (id F:\\Tool\\Tesseract-OCR\\tessdata/vie.traineddataword-dawg) ObjectCache(000000006333a700)::~ObjectCache(): WARNING! LEAK! object 00000000060deb80 still has count 1 (id F:\\Tool\\Tesseract-OCR\\tessdata/vie.traineddatanumber-dawg) ObjectCache(000000006333a700)::~ObjectCache(): WARNING! LEAK! object 00000000060df0c0 still has count 1 (id F:\\Tool\\Tesseract-OCR\\tessdata/vie.traineddatabigram-dawg) ObjectCache(000000006333a700)::~ObjectCache(): WARNING! LEAK! object 00000000060ded40 still has count 1 (id F:\\Tool\\Tesseract-OCR\\tessdata/vie.traineddatafreq-dawg)')
+2021-08-03 13:39:41,885 - INFO - Shutting down
+2021-08-03 13:39:41,996 - INFO - Waiting for application shutdown.
+2021-08-03 13:39:41,997 - INFO - Application shutdown complete.
+2021-08-03 13:39:41,997 - INFO - Finished server process [12912]
+2021-08-03 13:40:05,634 - INFO - Started server process [6996]
+2021-08-03 13:40:05,636 - INFO - Waiting for application startup.
+2021-08-03 13:40:05,637 - INFO - Application startup complete.
+2021-08-03 13:40:05,639 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:41:13,771 - INFO - Shutting down
+2021-08-03 13:41:13,888 - INFO - Waiting for application shutdown.
+2021-08-03 13:41:13,888 - INFO - Application shutdown complete.
+2021-08-03 13:41:13,888 - INFO - Finished server process [6996]
+2021-08-03 13:41:42,934 - INFO - Started server process [13636]
+2021-08-03 13:41:42,936 - INFO - Waiting for application startup.
+2021-08-03 13:41:42,937 - INFO - Application startup complete.
+2021-08-03 13:41:42,938 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:41:47,169 - ERROR - Exception in ASGI application
 Traceback (most recent call last):
   File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
     result = await app(self.scope, self.receive, self.send)
@@ -886,23 +601,141 @@ Traceback (most recent call last):
     await self.app(scope, receive, send)
   File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
     response = await func(request)
-  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 209, in app
-    response_data = await serialize_response(
-  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 137, in serialize_response
-    return jsonable_encoder(response_content)
-  File "F:\Tool\Python\lib\site-packages\fastapi\encoders.py", line 141, in jsonable_encoder
-    raise ValueError(errors)
-ValueError: [ValueError('dictionary update sequence element #0 has length 1032; 2 is required'), TypeError('vars() argument must have __dict__ attribute')]
-2021-07-30 16:34:51,407 - INFO - Shutting down
-2021-07-30 16:34:51,519 - INFO - Finished server process [10332]
-2021-07-30 16:34:51,600 - ERROR - Task was destroyed but it is pending!
-task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x0000022C96A6DFA0>()]>>
-2021-07-30 16:34:51,601 - INFO - ASGI 'lifespan' protocol appears unsupported.
-2021-07-30 16:35:00,777 - INFO - Started server process [5692]
-2021-07-30 16:35:00,779 - INFO - Waiting for application startup.
-2021-07-30 16:35:00,787 - INFO - Application startup complete.
-2021-07-30 16:35:00,789 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
-2021-07-30 16:35:02,738 - ERROR - Exception in ASGI application
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 33, in predict
+    text = tesseract.execute(image)
+AttributeError: 'Tesseract' object has no attribute 'execute'
+2021-08-03 13:41:56,621 - INFO - Shutting down
+2021-08-03 13:41:56,740 - INFO - Finished server process [13636]
+2021-08-03 13:41:56,840 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000001432981E7C0>()]>>
+2021-08-03 13:41:56,840 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-08-03 13:42:07,375 - INFO - Started server process [6372]
+2021-08-03 13:42:07,378 - INFO - Waiting for application startup.
+2021-08-03 13:42:07,379 - INFO - Application startup complete.
+2021-08-03 13:42:07,380 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:42:43,240 - INFO - Shutting down
+2021-08-03 13:42:43,360 - INFO - Waiting for application shutdown.
+2021-08-03 13:42:43,360 - INFO - Application shutdown complete.
+2021-08-03 13:42:43,362 - INFO - Finished server process [6372]
+2021-08-03 13:42:52,356 - INFO - Started server process [13504]
+2021-08-03 13:42:52,358 - INFO - Waiting for application startup.
+2021-08-03 13:42:52,359 - INFO - Application startup complete.
+2021-08-03 13:42:52,360 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:43:39,531 - INFO - Shutting down
+2021-08-03 13:43:39,636 - INFO - Waiting for application shutdown.
+2021-08-03 13:43:39,637 - INFO - Application shutdown complete.
+2021-08-03 13:43:39,638 - INFO - Finished server process [13504]
+2021-08-03 13:43:49,527 - INFO - Started server process [13832]
+2021-08-03 13:43:49,529 - INFO - Waiting for application startup.
+2021-08-03 13:43:49,530 - INFO - Application startup complete.
+2021-08-03 13:43:49,533 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:44:48,468 - INFO - Shutting down
+2021-08-03 13:44:48,568 - INFO - Waiting for application shutdown.
+2021-08-03 13:44:48,568 - INFO - Application shutdown complete.
+2021-08-03 13:44:48,572 - INFO - Finished server process [13832]
+2021-08-03 13:44:58,021 - INFO - Started server process [13708]
+2021-08-03 13:44:58,023 - INFO - Waiting for application startup.
+2021-08-03 13:44:58,024 - INFO - Application startup complete.
+2021-08-03 13:44:58,025 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:46:07,956 - INFO - Shutting down
+2021-08-03 13:46:08,059 - INFO - Waiting for application shutdown.
+2021-08-03 13:46:08,059 - INFO - Application shutdown complete.
+2021-08-03 13:46:08,063 - INFO - Finished server process [13708]
+2021-08-03 13:46:17,204 - INFO - Started server process [8464]
+2021-08-03 13:46:17,206 - INFO - Waiting for application startup.
+2021-08-03 13:46:17,207 - INFO - Application startup complete.
+2021-08-03 13:46:17,208 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:46:31,230 - INFO - Shutting down
+2021-08-03 13:46:31,342 - INFO - Finished server process [8464]
+2021-08-03 13:46:31,427 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-08-03 13:46:31,427 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() done, defined at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:48> wait_for=<Future cancelled>>
+2021-08-03 13:46:43,239 - INFO - Started server process [14008]
+2021-08-03 13:46:43,240 - INFO - Waiting for application startup.
+2021-08-03 13:46:43,241 - INFO - Application startup complete.
+2021-08-03 13:46:43,243 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:46:54,901 - INFO - POST http://10.1.32.130:9200/image-classify/_search [status:200 request:0.641s]
+2021-08-03 13:47:24,308 - INFO - POST http://10.1.32.130:9200/image-classify/_search [status:200 request:2.527s]
+2021-08-03 13:49:53,739 - INFO - Shutting down
+2021-08-03 13:49:53,854 - INFO - Waiting for application shutdown.
+2021-08-03 13:49:53,854 - INFO - Application shutdown complete.
+2021-08-03 13:49:53,854 - INFO - Finished server process [14008]
+2021-08-03 13:50:14,631 - INFO - Started server process [10412]
+2021-08-03 13:50:14,632 - INFO - Waiting for application startup.
+2021-08-03 13:50:14,633 - INFO - Application startup complete.
+2021-08-03 13:50:14,634 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:50:49,356 - INFO - Shutting down
+2021-08-03 13:50:49,468 - INFO - Waiting for application shutdown.
+2021-08-03 13:50:49,468 - INFO - Application shutdown complete.
+2021-08-03 13:50:49,469 - INFO - Finished server process [10412]
+2021-08-03 13:52:43,786 - INFO - Started server process [1708]
+2021-08-03 13:52:43,787 - INFO - Waiting for application startup.
+2021-08-03 13:52:43,788 - INFO - Application startup complete.
+2021-08-03 13:52:43,789 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:54:14,125 - INFO - Shutting down
+2021-08-03 13:54:14,236 - INFO - Waiting for application shutdown.
+2021-08-03 13:54:14,237 - INFO - Application shutdown complete.
+2021-08-03 13:54:14,237 - INFO - Finished server process [1708]
+2021-08-03 13:54:24,151 - INFO - Started server process [6316]
+2021-08-03 13:54:24,153 - INFO - Waiting for application startup.
+2021-08-03 13:54:24,154 - INFO - Application startup complete.
+2021-08-03 13:54:24,157 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 13:54:36,417 - INFO - POST http://10.1.32.130:9200/image-classify/_search [status:200 request:0.051s]
+2021-08-03 13:58:35,074 - INFO - Started server process [5680]
+2021-08-03 13:58:35,091 - INFO - Waiting for application startup.
+2021-08-03 13:58:35,091 - INFO - Application startup complete.
+2021-08-03 13:58:35,092 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 14:00:40,806 - INFO - Shutting down
+2021-08-03 14:00:41,037 - INFO - Finished server process [5680]
+2021-08-03 14:00:58,891 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000001F783358700>()]>>
+2021-08-03 14:00:58,892 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-08-03 14:01:14,793 - INFO - Started server process [8568]
+2021-08-03 14:01:14,794 - INFO - Waiting for application startup.
+2021-08-03 14:01:14,795 - INFO - Application startup complete.
+2021-08-03 14:01:14,796 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 14:01:32,893 - INFO - POST http://10.1.32.130:9200/image-classify/_search [status:200 request:0.050s]
+2021-08-03 14:02:49,599 - INFO - Shutting down
+2021-08-03 14:02:49,807 - INFO - Finished server process [8568]
+2021-08-03 14:02:54,791 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000001E332C08700>()]>>
+2021-08-03 14:02:54,791 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-08-03 14:03:13,197 - INFO - Started server process [9132]
+2021-08-03 14:03:13,200 - INFO - Waiting for application startup.
+2021-08-03 14:03:13,201 - INFO - Application startup complete.
+2021-08-03 14:03:13,203 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 14:12:24,829 - INFO - POST http://10.1.32.130:9200/image-classify/_search [status:200 request:0.056s]
+2021-08-03 14:12:34,624 - INFO - POST http://10.1.32.130:9200/image-classify/_search [status:200 request:0.026s]
+2021-08-03 14:12:57,746 - INFO - POST http://10.1.32.130:9200/image-classify/_search [status:200 request:0.035s]
+2021-08-03 14:13:13,213 - INFO - Shutting down
+2021-08-03 14:13:13,324 - INFO - Finished server process [9132]
+2021-08-03 14:13:13,457 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x0000018884FE8730>()]>>
+2021-08-03 14:13:13,457 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-08-03 14:13:22,405 - INFO - Started server process [1244]
+2021-08-03 14:13:22,407 - INFO - Waiting for application startup.
+2021-08-03 14:13:22,407 - INFO - Application startup complete.
+2021-08-03 14:13:22,408 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 14:13:30,105 - INFO - POST http://10.1.32.130:9200/image-classify/_search [status:200 request:0.111s]
+2021-08-03 14:14:24,058 - INFO - Shutting down
+2021-08-03 14:14:24,183 - INFO - Finished server process [1244]
+2021-08-03 14:14:24,291 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000001FAB21D8790>()]>>
+2021-08-03 14:14:24,291 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-08-03 14:14:33,382 - INFO - Started server process [13460]
+2021-08-03 14:14:33,383 - INFO - Waiting for application startup.
+2021-08-03 14:14:33,384 - INFO - Application startup complete.
+2021-08-03 14:14:33,385 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 14:14:36,652 - INFO - POST http://10.1.32.130:9200/image-classify/_search [status:200 request:0.111s]
+2021-08-03 14:14:36,654 - ERROR - Exception in ASGI application
 Traceback (most recent call last):
   File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
     result = await app(self.scope, self.receive, self.send)
@@ -928,7 +761,9 @@ Traceback (most recent call last):
     task.result()
   File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
     await self.app(scope, receive, send)
-  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
     await self.app(scope, receive, send)
   File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
     raise exc from None
@@ -940,24 +775,939 @@ Traceback (most recent call last):
     await self.app(scope, receive, send)
   File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
     response = await func(request)
-  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 209, in app
-    response_data = await serialize_response(
-  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 137, in serialize_response
-    return jsonable_encoder(response_content)
-  File "F:\Tool\Python\lib\site-packages\fastapi\encoders.py", line 127, in jsonable_encoder
-    return ENCODERS_BY_TYPE[type(obj)](obj)
-  File "pydantic\json.py", line 51, in pydantic.json.lambda
-UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
-2021-07-30 16:35:27,068 - INFO - Shutting down
-2021-07-30 16:35:27,211 - INFO - Finished server process [5692]
-2021-07-30 16:35:27,276 - ERROR - Task was destroyed but it is pending!
-task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x0000019B8EF0CFA0>()]>>
-2021-07-30 16:35:27,277 - INFO - ASGI 'lifespan' protocol appears unsupported.
-2021-07-30 16:35:35,413 - INFO - Started server process [3900]
-2021-07-30 16:35:35,416 - INFO - Waiting for application startup.
-2021-07-30 16:35:35,417 - INFO - Application startup complete.
-2021-07-30 16:35:35,419 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
-2021-07-30 16:36:00,074 - INFO - Shutting down
-2021-07-30 16:36:00,185 - INFO - Waiting for application shutdown.
-2021-07-30 16:36:00,185 - INFO - Application shutdown complete.
-2021-07-30 16:36:00,186 - INFO - Finished server process [3900]
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 48, in predict
+    score = hits['_score']/2
+TypeError: list indices must be integers or slices, not str
+2021-08-03 14:14:47,580 - INFO - Shutting down
+2021-08-03 14:14:47,686 - INFO - Waiting for application shutdown.
+2021-08-03 14:14:47,686 - INFO - Application shutdown complete.
+2021-08-03 14:14:47,688 - INFO - Finished server process [13460]
+2021-08-03 14:14:58,387 - INFO - Started server process [14044]
+2021-08-03 14:14:58,389 - INFO - Waiting for application startup.
+2021-08-03 14:14:58,390 - INFO - Application startup complete.
+2021-08-03 14:14:58,392 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 14:15:00,369 - INFO - POST http://10.1.32.130:9200/image-classify/_search [status:200 request:0.068s]
+2021-08-03 14:15:00,371 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 48, in predict
+    score = hits['_score']
+TypeError: list indices must be integers or slices, not str
+2021-08-03 14:15:34,304 - INFO - Shutting down
+2021-08-03 14:15:34,422 - INFO - Waiting for application shutdown.
+2021-08-03 14:15:34,422 - INFO - Application shutdown complete.
+2021-08-03 14:15:34,422 - INFO - Finished server process [14044]
+2021-08-03 14:15:44,166 - INFO - Started server process [12856]
+2021-08-03 14:15:44,168 - INFO - Waiting for application startup.
+2021-08-03 14:15:44,169 - INFO - Application startup complete.
+2021-08-03 14:15:44,170 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 14:15:47,951 - INFO - POST http://10.1.32.130:9200/image-classify/_search [status:200 request:0.042s]
+2021-08-03 14:16:01,472 - INFO - Shutting down
+2021-08-03 14:16:01,584 - INFO - Waiting for application shutdown.
+2021-08-03 14:16:01,584 - INFO - Application shutdown complete.
+2021-08-03 14:16:01,585 - INFO - Finished server process [12856]
+2021-08-03 14:16:11,197 - INFO - Started server process [8024]
+2021-08-03 14:16:11,200 - INFO - Waiting for application startup.
+2021-08-03 14:16:11,202 - INFO - Application startup complete.
+2021-08-03 14:16:11,210 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 14:16:24,963 - INFO - POST http://10.1.32.130:9200/image-classify/_search [status:200 request:0.390s]
+2021-08-03 14:36:57,254 - INFO - Shutting down
+2021-08-03 14:36:57,365 - INFO - Waiting for application shutdown.
+2021-08-03 14:36:57,366 - INFO - Application shutdown complete.
+2021-08-03 14:36:57,366 - INFO - Finished server process [8024]
+2021-08-03 14:37:06,524 - INFO - Started server process [8532]
+2021-08-03 14:37:06,527 - INFO - Waiting for application startup.
+2021-08-03 14:37:06,528 - INFO - Application startup complete.
+2021-08-03 14:37:06,530 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 14:43:44,407 - INFO - Shutting down
+2021-08-03 14:43:44,528 - INFO - Waiting for application shutdown.
+2021-08-03 14:43:44,528 - INFO - Application shutdown complete.
+2021-08-03 14:43:44,530 - INFO - Finished server process [8532]
+2021-08-03 14:43:53,812 - INFO - Started server process [13268]
+2021-08-03 14:43:53,813 - INFO - Waiting for application startup.
+2021-08-03 14:43:53,814 - INFO - Application startup complete.
+2021-08-03 14:43:53,815 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 14:46:42,956 - INFO - Shutting down
+2021-08-03 14:46:43,077 - INFO - Waiting for application shutdown.
+2021-08-03 14:46:43,077 - INFO - Application shutdown complete.
+2021-08-03 14:46:43,078 - INFO - Finished server process [13268]
+2021-08-03 14:49:24,676 - INFO - Started server process [10836]
+2021-08-03 14:49:24,678 - INFO - Waiting for application startup.
+2021-08-03 14:49:24,679 - INFO - Application startup complete.
+2021-08-03 14:49:24,680 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 14:49:29,207 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\es.py", line 60, in delete
+    return name
+NameError: name 'name' is not defined
+2021-08-03 14:49:48,403 - INFO - Shutting down
+2021-08-03 14:49:48,515 - INFO - Finished server process [10836]
+2021-08-03 14:49:48,621 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x00000206B26385B0>()]>>
+2021-08-03 14:49:48,622 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-08-03 14:50:35,640 - INFO - Started server process [6320]
+2021-08-03 14:50:35,643 - INFO - Waiting for application startup.
+2021-08-03 14:50:35,644 - INFO - Application startup complete.
+2021-08-03 14:50:35,645 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 14:59:07,872 - INFO - Shutting down
+2021-08-03 14:59:07,984 - INFO - Waiting for application shutdown.
+2021-08-03 14:59:08,024 - INFO - Application shutdown complete.
+2021-08-03 14:59:08,026 - INFO - Finished server process [6320]
+2021-08-03 14:59:17,571 - INFO - Started server process [4556]
+2021-08-03 14:59:17,572 - INFO - Waiting for application startup.
+2021-08-03 14:59:17,574 - INFO - Application startup complete.
+2021-08-03 14:59:17,575 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 14:59:25,234 - INFO - Shutting down
+2021-08-03 14:59:25,345 - INFO - Finished server process [4556]
+2021-08-03 14:59:25,444 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-08-03 14:59:25,445 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() done, defined at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:48> wait_for=<Future cancelled>>
+2021-08-03 14:59:45,535 - INFO - Started server process [8576]
+2021-08-03 14:59:45,537 - INFO - Waiting for application startup.
+2021-08-03 14:59:45,537 - INFO - Application startup complete.
+2021-08-03 14:59:45,539 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 15:00:17,490 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.011s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x0000020E09BFE940>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-03 15:00:27,632 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.005s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x0000020E09C087C0>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-03 15:00:37,648 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.014s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x0000020E09BFE910>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-03 15:00:38,961 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:1.313s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000020E09C49100>: Failed to establish a new connection: [WinError 10053] An established connection was aborted by the software in your host machine
+2021-08-03 15:00:38,968 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\es.py", line 62, in delete
+    return es_utils.delete_elasticsearch_doc_by_name(es, config_ml.INDEX_NAME, name)
+  File "E:\Github\image-classify\backend\app\helpers\es_utils.py", line 74, in delete_elasticsearch_doc_by_name
+    res = es.search(index=index_name, body=query)
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\client\utils.py", line 168, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\client\__init__.py", line 1670, in search
+    return self.transport.perform_request(
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\transport.py", line 413, in perform_request
+    raise e
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\transport.py", line 381, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 266, in perform_request
+    raise ConnectionError("N/A", str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x0000020E09C49100>: Failed to establish a new connection: [WinError 10053] An established connection was aborted by the software in your host machine) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x0000020E09C49100>: Failed to establish a new connection: [WinError 10053] An established connection was aborted by the software in your host machine)
+2021-08-03 15:01:21,383 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:400 request:0.126s]
+2021-08-03 15:01:21,388 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\es.py", line 62, in delete
+    return es_utils.delete_elasticsearch_doc_by_name(es, config_ml.INDEX_NAME, name)
+  File "E:\Github\image-classify\backend\app\helpers\es_utils.py", line 74, in delete_elasticsearch_doc_by_name
+    res = es.search(index=index_name, body=query)
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\client\utils.py", line 168, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\client\__init__.py", line 1670, in search
+    return self.transport.perform_request(
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\transport.py", line 415, in perform_request
+    raise e
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\transport.py", line 381, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 277, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\base.py", line 330, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.RequestError: RequestError(400, 'parsing_exception', '[function_score] malformed query, expected [END_OBJECT] but found [FIELD_NAME]')
+2021-08-03 15:01:32,044 - INFO - Shutting down
+2021-08-03 15:01:32,148 - INFO - Waiting for application shutdown.
+2021-08-03 15:01:32,151 - INFO - Application shutdown complete.
+2021-08-03 15:01:32,152 - INFO - Finished server process [8576]
+2021-08-03 15:01:41,419 - INFO - Started server process [13648]
+2021-08-03 15:01:41,421 - INFO - Waiting for application startup.
+2021-08-03 15:01:41,422 - INFO - Application startup complete.
+2021-08-03 15:01:41,423 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 15:03:10,907 - INFO - POST http://10.1.32.130:9200/image-classify/_search [status:200 request:0.044s]
+2021-08-03 15:03:37,158 - INFO - Shutting down
+2021-08-03 15:03:37,266 - INFO - Waiting for application shutdown.
+2021-08-03 15:03:37,266 - INFO - Application shutdown complete.
+2021-08-03 15:03:37,269 - INFO - Finished server process [13648]
+2021-08-03 15:03:46,919 - INFO - Started server process [8084]
+2021-08-03 15:03:46,920 - INFO - Waiting for application startup.
+2021-08-03 15:03:46,921 - INFO - Application startup complete.
+2021-08-03 15:03:46,922 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 15:18:18,075 - INFO - Shutting down
+2021-08-03 15:18:18,190 - INFO - Waiting for application shutdown.
+2021-08-03 15:18:18,190 - INFO - Application shutdown complete.
+2021-08-03 15:18:18,190 - INFO - Finished server process [8084]
+2021-08-03 15:19:03,827 - INFO - Started server process [7152]
+2021-08-03 15:19:03,830 - INFO - Waiting for application startup.
+2021-08-03 15:19:03,832 - INFO - Application startup complete.
+2021-08-03 15:19:03,833 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 15:23:17,672 - INFO - Shutting down
+2021-08-03 15:23:17,784 - INFO - Waiting for application shutdown.
+2021-08-03 15:23:17,784 - INFO - Application shutdown complete.
+2021-08-03 15:23:17,785 - INFO - Finished server process [7152]
+2021-08-03 15:23:26,812 - INFO - Started server process [5720]
+2021-08-03 15:23:26,814 - INFO - Waiting for application startup.
+2021-08-03 15:23:26,815 - INFO - Application startup complete.
+2021-08-03 15:23:26,817 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 15:24:00,717 - INFO - PUT http://10.1.32.130:9200/image-classify/_create/84843255-e3d7-5090-bddd-7479ee0f2934 [status:201 request:0.147s]
+2021-08-03 15:26:06,054 - INFO - POST http://10.1.32.130:9200/image-classify/_search [status:200 request:0.030s]
+2021-08-03 15:29:22,397 - INFO - Shutting down
+2021-08-03 15:29:22,509 - INFO - Waiting for application shutdown.
+2021-08-03 15:29:22,510 - INFO - Application shutdown complete.
+2021-08-03 15:29:22,510 - INFO - Finished server process [5720]
+2021-08-03 15:29:32,044 - INFO - Started server process [3764]
+2021-08-03 15:29:32,045 - INFO - Waiting for application startup.
+2021-08-03 15:29:32,047 - INFO - Application startup complete.
+2021-08-03 15:29:32,049 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 15:29:45,681 - INFO - POST http://10.1.32.130:9200/image-classify/_search [status:200 request:0.109s]
+2021-08-03 15:36:37,871 - INFO - Shutting down
+2021-08-03 15:36:37,987 - INFO - Waiting for application shutdown.
+2021-08-03 15:36:37,987 - INFO - Application shutdown complete.
+2021-08-03 15:36:37,987 - INFO - Finished server process [3764]
+2021-08-03 15:36:47,106 - INFO - Started server process [3988]
+2021-08-03 15:36:47,108 - INFO - Waiting for application startup.
+2021-08-03 15:36:47,109 - INFO - Application startup complete.
+2021-08-03 15:36:47,110 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 15:37:00,217 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.015s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001C11C2E1F10>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-03 15:37:10,226 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.006s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001C11C2CC880>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-03 15:37:20,242 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.015s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001C11C2F8190>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-03 15:37:30,252 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.010s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001C11C2F8250>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-03 15:37:30,256 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\es.py", line 66, in delete
+    return es_utils.delete_elasticsearch_doc_by_class_id(es, config_ml.INDEX_NAME, class_id)
+  File "E:\Github\image-classify\backend\app\helpers\es_utils.py", line 53, in delete_elasticsearch_doc_by_class_id
+    res = es.search(index=index_name, body=query)
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\client\utils.py", line 168, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\client\__init__.py", line 1670, in search
+    return self.transport.perform_request(
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\transport.py", line 413, in perform_request
+    raise e
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\transport.py", line 381, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 266, in perform_request
+    raise ConnectionError("N/A", str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError((<urllib3.connection.HTTPConnection object at 0x000001C11C2F8250>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')) caused by: ConnectTimeoutError((<urllib3.connection.HTTPConnection object at 0x000001C11C2F8250>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)'))
+2021-08-03 15:50:31,460 - INFO - Started server process [15452]
+2021-08-03 15:50:31,482 - INFO - Waiting for application startup.
+2021-08-03 15:50:31,497 - INFO - Application startup complete.
+2021-08-03 15:50:31,498 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 15:50:48,562 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.014s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000002260A987520>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-03 15:50:58,699 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.012s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000002260A9875E0>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-03 15:51:08,711 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.010s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000002260A987880>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-03 15:51:08,988 - INFO - POST http://10.1.32.130:9200/image-classify/_search [status:200 request:0.245s]
+2021-08-03 15:51:09,025 - INFO - DELETE http://10.1.32.130:9200/image-classify/_doc/84843255-e3d7-5090-bddd-7479ee0f2934 [status:200 request:0.038s]
+2021-08-03 15:51:14,275 - INFO - POST http://10.1.32.130:9200/image-classify/_search [status:200 request:0.067s]
+2021-08-03 15:51:56,206 - INFO - Shutting down
+2021-08-03 15:51:56,317 - INFO - Finished server process [15452]
+2021-08-03 15:51:56,434 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000002260A94A820>()]>>
+2021-08-03 15:51:56,434 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-08-03 15:52:06,300 - INFO - Started server process [1812]
+2021-08-03 15:52:06,302 - INFO - Waiting for application startup.
+2021-08-03 15:52:06,303 - INFO - Application startup complete.
+2021-08-03 15:52:06,304 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 15:52:13,500 - INFO - POST http://10.1.32.130:9200/image-classify/_search [status:200 request:0.116s]
+2021-08-03 15:52:18,406 - INFO - POST http://10.1.32.130:9200/image-classify/_search [status:200 request:0.392s]
+2021-08-03 15:53:01,563 - INFO - Shutting down
+2021-08-03 15:53:01,688 - INFO - Finished server process [1812]
+2021-08-03 15:53:01,789 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x00000288AB3F43D0>()]>>
+2021-08-03 15:53:01,789 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-08-03 15:53:10,960 - INFO - Started server process [17020]
+2021-08-03 15:53:10,961 - INFO - Waiting for application startup.
+2021-08-03 15:53:10,962 - INFO - Application startup complete.
+2021-08-03 15:53:10,964 - INFO - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2021-08-03 15:53:16,508 - INFO - POST http://10.1.32.130:9200/image-classify/_search [status:200 request:0.484s]
+2021-08-03 15:55:03,881 - INFO - Shutting down
+2021-08-03 15:55:03,991 - INFO - Waiting for application shutdown.
+2021-08-03 15:55:03,993 - INFO - Application shutdown complete.
+2021-08-03 15:55:03,995 - INFO - Finished server process [17020]
+2021-08-03 15:55:18,860 - INFO - Started server process [5252]
+2021-08-03 15:55:18,862 - INFO - Waiting for application startup.
+2021-08-03 15:55:18,863 - INFO - Application startup complete.
+2021-08-03 15:55:18,864 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-03 15:56:57,894 - INFO - Shutting down
+2021-08-03 15:56:58,011 - INFO - Waiting for application shutdown.
+2021-08-03 15:56:58,011 - INFO - Application shutdown complete.
+2021-08-03 15:56:58,013 - INFO - Finished server process [5252]

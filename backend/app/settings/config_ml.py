@@ -11,8 +11,9 @@ CLASSES = {
     2: 'driver licence',
     3: 'invoice',
     4: 'resume',
-    5: 'vehicle certificate',
-    6: 'degree of bachelor' 
+    5: 'vehicle registration certificate',
+    6: 'degree of bachelor',
+    7: 'test'
 }
 
 STOPWORDS = set(['\\', '(', ')', ':', '.', ';', ',', '\\\\', '\\\\\\', '-', '%', '`', '—-', '?', '——', '--', '@',  '[', ']', '.....', '``', 'đụ', 'đéo'])

@@ -143,6 +143,6 @@ class ScannerFindContours:
                     approx_new[k] = approx_new[k]*ratio
                 output = self.four_point_transform(image, approx_new)
             
-        if check == False or  output.shape[0] < 100:
+        if check == False or  output.shape[0] < 200:
             output = image
         return output

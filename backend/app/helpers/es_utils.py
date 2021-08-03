@@ -34,10 +34,42 @@ def create_elasticsearch_datasets(es: Elasticsearch, index_name: str, id: int, n
 
     except Exception as e:
         print('[error] can not create es data! ', e)
-    
+
+
+
 
 def delete_elasticsearch_index(es: Elasticsearch, index_name, ):
     es.indices.delete(index=index_name, ignore=[400, 404])
+
+
+def delete_elasticsearch_doc_by_class_id(es: Elasticsearch, index_name, class_id):
+    query = {
+        'query': {
+            "match": {
+                "id": class_id
+            },
+        }
+    }
+    res = es.search(index=index_name, body=query)
+    end = []
+    for item in res['hits']['hits']:
+        _id = item['_id']
+        es.delete(index=index_name,id=_id)
+        end.append(_id)
+    return end
+    
+
+def get_elasticsearch_doc_by_class_id(es: Elasticsearch, index_name, class_id):
+    query = {
+        'query': {
+            "match": {
+                "id": class_id
+            },
+        }
+    }
+    res = es.search(index=index_name, body=query)
+    return res
+
 
 
 def matching_elasticsearch_index(es: Elasticsearch, index_name: str, vector: list):
