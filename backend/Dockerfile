@@ -10,4 +10,4 @@ WORKDIR /app
 
 RUN pip3 install -r requirements.txt
     
-EXPOSE 8081
+EXPOSE 8082
