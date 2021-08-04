@@ -32,6 +32,7 @@ transformers==4.9.1
 torchvision==0.10.0
 pytesseract==0.3.8
 opencv-python==4.5.3.56
+numpy==1.21.1
 pythonRLSA==1.0.0
 scikit-learn==0.24.2
 matplotlib==3.4.2

@@ -5,4 +5,6 @@ __pycache__
 
 models
 
+datasets/image*
+
 env-stag.ini
