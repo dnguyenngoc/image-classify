@@ -6,7 +6,7 @@ COPY ./app /app
 
 RUN apt-get update ##[edited]
 RUN apt-get install ffmpeg libsm6 libxext6  -y
-RUN apt-get install tesseract-ocr
+RUN apt-get install tesseract-ocr -y
 
 COPY ./requirements.txt ./app/requirements.txt
 

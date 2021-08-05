@@ -79,10 +79,9 @@ def pre_processing(
     image = cv2.imdecode(np.frombuffer(byte_file, np.uint8), 1)
     # image = scanner.process(image)
     image = image_utils.pre_process(image)
+    cv2.imwrite('./images/' + file_name,  image)
     text = tesseract.excecute(image)
     tokens = word_tokenize(text_utils.text_cleaner(text))
-    image = image_utils.pre_process(image)
-    cv2.imwrite('./images/' + file_name,  image)
     if len(tokens) >= config_ml.LEN_TOKEN:
         tokens = tokens[0:config_ml.LEN_TOKEN]
     else:
