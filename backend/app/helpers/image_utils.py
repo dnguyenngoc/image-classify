@@ -73,11 +73,11 @@ def load(path):
 
 
 def pre_process(img):
-#     img = skew.determine_skew(img)
-#     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    img = skew.determine_skew(img)
     img = cv2.resize(img, None, fx=1.5, fy=1.5, interpolation=cv2.INTER_CUBIC)
     # Converting to gray scale
     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    
     
     #Removing Shadows
     rgb_planes = cv2.split(img)
@@ -95,12 +95,14 @@ def pre_process(img):
     img = cv2.dilate(img, kernel, iterations=1)#increases the white region in the image 
     img = cv2.erode(img, kernel, iterations=1) #erodes away the boundaries of foreground object
     
-    #Apply blur to smooth out the edges
+#     Apply blur to smooth out the edges
 #     img = cv2.GaussianBlur(img, (5, 5), 0)
 
     # Apply threshold to get image with only b&w (binarization)
     img = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
-    return img
+    imgf = cv2.adaptiveThreshold(img,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,11,2)
+    
+    return imgf
 
     
 

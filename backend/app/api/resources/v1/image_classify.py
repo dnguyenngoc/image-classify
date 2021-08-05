@@ -77,7 +77,8 @@ def pre_processing(
     if len(byte_file) > 20**22: 
         raise HTTPException(status_code=400, detail="wrong size > 20MB")
     image = cv2.imdecode(np.frombuffer(byte_file, np.uint8), 1)
-    image = scanner.process(image)
+    # image = scanner.process(image)
+    image = image_utils.pre_process(image)
     text = tesseract.excecute(image)
     tokens = word_tokenize(text_utils.text_cleaner(text))
     image = image_utils.pre_process(image)

@@ -23,7 +23,7 @@ def text_cleaner(text):
 def fix_tokens(tokens, STOPWORDS):
     tokens_end = []
     for item in tokens:
-        string_check= re.compile('[@_!#$%^&*()<>?/\|}{~:,;0123456789°ð“ø.ÿöï—›®+º«»©]') 
+        string_check= re.compile('[@_!#$%^&*()<>?\|}{~:.,;0123456789°ð“ø.ÿöï—›®+º«»©¶ß=’²\']') 
         if(string_check.search(item) != None): 
             continue
         elif item.isnumeric() or item in STOPWORDS:

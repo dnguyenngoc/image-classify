@@ -15,6 +15,8 @@ from skimage.feature import canny
 from skimage.color import rgb2gray
 from skimage.transform import hough_line, hough_line_peaks
 import cv2
+from PIL import Image as im
+from scipy.ndimage import interpolation as inter
 
 
 class SkewDetect:
@@ -119,24 +121,19 @@ class SkewDetect:
         else:
             ans_arr = self.get_max_freq_elem(ap_deg)
             ans_res = np.mean(ans_arr)
-#         print(ans_res)
-        if ans_res == 0:
-            best_angle = 0
-        if -90 <= ans_res < -45:
-            best_angle = -(90 + ans_res)
-        elif -45 <= ans_res < 0:
-            best_angle = -(45 + ans_res)
-        elif 0 < ans_res <= 45:
-            best_angle = ans_res
-        elif 45< ans_res <=90: 
-            best_angle = 90 - ans_res
+        if (70 < ans_res <= 90):
+            ans_res = -(90-ans_res)
+        elif (-90 <= ans_res < -70):
+            ans_res =  90 + ans_res
         else:
-            best_angle = 0
-#         print(best_angle)
-        (h, w) = gray.shape[:2]
-        center = (w // 2, h // 2)
-        M = cv2.getRotationMatrix2D(center, best_angle, 1.0)
-        rotated = cv2.warpAffine(image, M, (w, h), flags=cv2.INTER_CUBIC, \
-          borderMode=cv2.BORDER_REPLICATE)
-        return rotated
+            ans_res = 0
+
+        data = inter.rotate(image, ans_res, reshape=False, order=0)
+#         img = im.fromarray((255 * data).astype("uint8")).convert("RGB")
+#         (h, w) = gray.shape[:2]
+#         center = (w // 2, h // 2)
+#         M = cv2.getRotationMatrix2D(center, ans_arr, 1.0)
+#         rotated = cv2.warpAffine(image, M, (w, h), flags=cv2.INTER_CUBIC, \
+#           borderMode=cv2.BORDER_REPLICATE)
+        return data
     
