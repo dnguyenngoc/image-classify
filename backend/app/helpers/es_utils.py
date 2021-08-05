@@ -74,7 +74,7 @@ def get_elasticsearch_doc_by_class_id(es: Elasticsearch, index_name, class_id):
 
 def matching_elasticsearch_index(es: Elasticsearch, index_name: str, vector: list):
     query = {
-        'size': 1,
+        'size': 3,
         'query': {
             "script_score": {
                 "query": {
