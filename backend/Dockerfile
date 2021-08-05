@@ -4,6 +4,9 @@ LABEL maintainer="Duy Nguyen <duyngunyenngoc@hotmail.com>"
 
 COPY ./app /app
 
+RUN apt-get update ##[edited]
+RUN apt-get install ffmpeg libsm6 libxext6  -y
+
 COPY ./requirements.txt ./app/requirements.txt
 
 WORKDIR /app
