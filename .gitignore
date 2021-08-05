@@ -8,3 +8,4 @@ models
 datasets/image*
 
 env-stag.ini
+LineCounter

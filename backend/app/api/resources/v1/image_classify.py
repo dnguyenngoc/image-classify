@@ -74,8 +74,8 @@ def pre_processing(
     file_name = str(uuidOne) + file.filename
     byte_file = file.file.read()
 
-    if len(byte_file) > 20**22: 
-        raise HTTPException(status_code=400, detail="wrong size > 20MB")
+    if len(byte_file) > 5**22: 
+        raise HTTPException(status_code=400, detail="wrong size > 5MB")
     image = cv2.imdecode(np.frombuffer(byte_file, np.uint8), 1)
     # image = scanner.process(image)
     image = image_utils.pre_process(image)
@@ -95,6 +95,13 @@ def pre_processing(
     hits = pred['hits']['hits']
     score = hits[0]['_score']/2
     class_pre = hits[0]['_source']
+    if score < 0.86:
+        a = {'0': 0, '1':0, '2': 0}
+        for i in range(len(hits)):
+            a[str(i)] += 1
+        max_end = max(a, key=a.get)
+        class_pre = hits[int(max_end)]['_source']['id']
+        score = hits[int(max_end)]['_score']/2
     class_pre['score'] = score
     class_pre['pre_url'] = 'http://10.1.133.3:8082/api/v1/image-classify/images/'+ file_name
     return class_pre
