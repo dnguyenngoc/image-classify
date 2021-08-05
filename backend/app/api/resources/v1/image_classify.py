@@ -96,7 +96,7 @@ def pre_processing(
     score = hits[0]['_score']/2
     class_pre = hits[0]['_source']
     class_pre['score'] = score
-    class_pre['pre_url'] = 'http://localhost:8082/api/v1/image-classify/images/'+ file_name
+    class_pre['pre_url'] = 'http://10.1.133.3:8082/api/v1/image-classify/images/'+ file_name
     return class_pre
 
     

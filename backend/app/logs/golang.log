@@ -21,3 +21,12 @@
 2021-08-05 11:04:39,988 - INFO - Waiting for application shutdown.
 2021-08-05 11:04:39,989 - INFO - Application shutdown complete.
 2021-08-05 11:04:39,990 - INFO - Finished server process [7716]
+2021-08-05 12:58:05,514 - INFO - Started server process [12964]
+2021-08-05 12:58:05,516 - INFO - Waiting for application startup.
+2021-08-05 12:58:05,516 - INFO - Application startup complete.
+2021-08-05 12:58:05,517 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-05 12:58:09,858 - INFO - Shutting down
+2021-08-05 12:58:09,968 - INFO - Finished server process [12964]
+2021-08-05 12:58:10,097 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x0000015308AD1850>()]>>
+2021-08-05 12:58:10,097 - INFO - ASGI 'lifespan' protocol appears unsupported.
