@@ -73,7 +73,8 @@ def load(path):
 
 
 def pre_process(img):
-    img = skew.determine_skew(img)
+#     img = skew.determine_skew(img)
+#     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     img = cv2.resize(img, None, fx=1.5, fy=1.5, interpolation=cv2.INTER_CUBIC)
     # Converting to gray scale
     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -95,7 +96,7 @@ def pre_process(img):
     img = cv2.erode(img, kernel, iterations=1) #erodes away the boundaries of foreground object
     
     #Apply blur to smooth out the edges
-    img = cv2.GaussianBlur(img, (5, 5), 0)
+#     img = cv2.GaussianBlur(img, (5, 5), 0)
 
     # Apply threshold to get image with only b&w (binarization)
     img = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]

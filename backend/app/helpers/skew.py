@@ -119,7 +119,7 @@ class SkewDetect:
         else:
             ans_arr = self.get_max_freq_elem(ap_deg)
             ans_res = np.mean(ans_arr)
-        print(ans_res)
+#         print(ans_res)
         if ans_res == 0:
             best_angle = 0
         if -90 <= ans_res < -45:
@@ -132,7 +132,7 @@ class SkewDetect:
             best_angle = 90 - ans_res
         else:
             best_angle = 0
-        print(best_angle)
+#         print(best_angle)
         (h, w) = gray.shape[:2]
         center = (w // 2, h // 2)
         M = cv2.getRotationMatrix2D(center, best_angle, 1.0)

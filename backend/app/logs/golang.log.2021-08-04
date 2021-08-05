@@ -1,0 +1,2679 @@
+2021-08-04 09:37:57,063 - INFO - Started server process [9364]
+2021-08-04 09:37:57,076 - INFO - Waiting for application startup.
+2021-08-04 09:37:57,077 - INFO - Application startup complete.
+2021-08-04 09:37:57,078 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 09:38:10,867 - INFO - Shutting down
+2021-08-04 09:38:10,974 - INFO - Waiting for application shutdown.
+2021-08-04 09:38:10,974 - INFO - Application shutdown complete.
+2021-08-04 09:38:10,974 - INFO - Finished server process [9364]
+2021-08-04 09:44:40,873 - INFO - Started server process [1504]
+2021-08-04 09:44:40,874 - INFO - Waiting for application startup.
+2021-08-04 09:44:40,875 - INFO - Application startup complete.
+2021-08-04 09:44:40,876 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 09:50:22,564 - INFO - Started server process [11944]
+2021-08-04 09:50:22,565 - INFO - Waiting for application startup.
+2021-08-04 09:50:22,565 - INFO - Application startup complete.
+2021-08-04 09:50:22,566 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 12:30:33,676 - INFO - Shutting down
+2021-08-04 12:30:33,786 - INFO - Waiting for application shutdown.
+2021-08-04 12:30:33,789 - INFO - Application shutdown complete.
+2021-08-04 12:30:33,790 - INFO - Finished server process [11944]
+2021-08-04 12:30:44,008 - INFO - Started server process [3108]
+2021-08-04 12:30:44,009 - INFO - Waiting for application startup.
+2021-08-04 12:30:44,011 - INFO - Application startup complete.
+2021-08-04 12:30:44,012 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 12:31:16,676 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 28, in get_images
+    return StreamingResponse(io.BytesIO(im_png.tobytes()), media_type="image/png")
+AttributeError: 'tuple' object has no attribute 'tobytes'
+2021-08-04 12:32:38,188 - INFO - Shutting down
+2021-08-04 12:32:38,300 - INFO - Waiting for application shutdown.
+2021-08-04 12:32:38,300 - INFO - Application shutdown complete.
+2021-08-04 12:32:38,301 - INFO - Finished server process [3108]
+2021-08-04 12:32:48,325 - INFO - Started server process [5996]
+2021-08-04 12:32:48,326 - INFO - Waiting for application startup.
+2021-08-04 12:32:48,327 - INFO - Application startup complete.
+2021-08-04 12:32:48,328 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 12:32:53,163 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 26, in get_images
+    with open('/images/'+ file_name , 'rb') as cv2img:
+FileNotFoundError: [Errno 2] No such file or directory: '/images/1623636868-c328f69dea291f774638.jpg'
+2021-08-04 12:33:49,755 - INFO - Shutting down
+2021-08-04 12:33:49,866 - INFO - Waiting for application shutdown.
+2021-08-04 12:33:49,867 - INFO - Application shutdown complete.
+2021-08-04 12:33:49,869 - INFO - Finished server process [5996]
+2021-08-04 12:34:00,496 - INFO - Started server process [2088]
+2021-08-04 12:34:00,497 - INFO - Waiting for application startup.
+2021-08-04 12:34:00,497 - INFO - Application startup complete.
+2021-08-04 12:34:00,498 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 12:34:39,369 - INFO - Shutting down
+2021-08-04 12:34:39,479 - INFO - Waiting for application shutdown.
+2021-08-04 12:34:39,480 - INFO - Application shutdown complete.
+2021-08-04 12:34:39,481 - INFO - Finished server process [2088]
+2021-08-04 12:34:49,459 - INFO - Started server process [3556]
+2021-08-04 12:34:49,461 - INFO - Waiting for application startup.
+2021-08-04 12:34:49,462 - INFO - Application startup complete.
+2021-08-04 12:34:49,463 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 12:34:49,632 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 28, in get_images
+    im_png = cv2.imencode(".png", cv2img)
+cv2.error: OpenCV(4.5.3) :-1: error: (-5:Bad argument) in function 'imencode'
+> Overload resolution failed:
+>  - img is not a numpy array, neither a scalar
+>  - Expected Ptr<cv::UMat> for argument 'img'
+
+2021-08-04 12:34:50,595 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 28, in get_images
+    im_png = cv2.imencode(".png", cv2img)
+cv2.error: OpenCV(4.5.3) :-1: error: (-5:Bad argument) in function 'imencode'
+> Overload resolution failed:
+>  - img is not a numpy array, neither a scalar
+>  - Expected Ptr<cv::UMat> for argument 'img'
+
+2021-08-04 12:35:39,361 - INFO - Shutting down
+2021-08-04 12:35:39,476 - INFO - Waiting for application shutdown.
+2021-08-04 12:35:39,476 - INFO - Application shutdown complete.
+2021-08-04 12:35:39,478 - INFO - Finished server process [3556]
+2021-08-04 12:35:49,895 - INFO - Started server process [14396]
+2021-08-04 12:35:49,897 - INFO - Waiting for application startup.
+2021-08-04 12:35:49,897 - INFO - Application startup complete.
+2021-08-04 12:35:49,898 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 12:35:50,039 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 29, in get_images
+    return StreamingResponse(io.BytesIO(im_png.tobytes()), media_type="image/png")
+AttributeError: 'tuple' object has no attribute 'tobytes'
+2021-08-04 12:39:18,850 - INFO - Shutting down
+2021-08-04 12:39:18,952 - INFO - Waiting for application shutdown.
+2021-08-04 12:39:18,953 - INFO - Application shutdown complete.
+2021-08-04 12:39:18,955 - INFO - Finished server process [14396]
+2021-08-04 12:39:28,508 - INFO - Started server process [5168]
+2021-08-04 12:39:28,509 - INFO - Waiting for application startup.
+2021-08-04 12:39:28,510 - INFO - Application startup complete.
+2021-08-04 12:39:28,511 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 12:39:34,409 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 29, in get_images
+    img.save(image, format='PNG', quality=85)   # Save image to BytesIO
+AttributeError: 'numpy.ndarray' object has no attribute 'save'
+2021-08-04 12:40:48,740 - INFO - Shutting down
+2021-08-04 12:40:48,852 - INFO - Waiting for application shutdown.
+2021-08-04 12:40:48,853 - INFO - Application shutdown complete.
+2021-08-04 12:40:48,854 - INFO - Finished server process [5168]
+2021-08-04 12:40:59,135 - INFO - Started server process [14228]
+2021-08-04 12:40:59,138 - INFO - Waiting for application startup.
+2021-08-04 12:40:59,139 - INFO - Application startup complete.
+2021-08-04 12:40:59,140 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 12:41:03,271 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 29, in get_images
+    img.save(image, format='PNG', quality=85)   # Save image to BytesIO
+AttributeError: '_io.BufferedReader' object has no attribute 'save'
+2021-08-04 12:41:08,190 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 29, in get_images
+    img.save(image, format='PNG', quality=85)   # Save image to BytesIO
+AttributeError: '_io.BufferedReader' object has no attribute 'save'
+2021-08-04 12:41:42,217 - INFO - Shutting down
+2021-08-04 12:41:42,332 - INFO - Waiting for application shutdown.
+2021-08-04 12:41:42,333 - INFO - Application shutdown complete.
+2021-08-04 12:41:42,334 - INFO - Finished server process [14228]
+2021-08-04 12:41:51,977 - INFO - Started server process [14060]
+2021-08-04 12:41:51,978 - INFO - Waiting for application startup.
+2021-08-04 12:41:51,979 - INFO - Application startup complete.
+2021-08-04 12:41:51,980 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 12:41:56,389 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 26, in __call__
+    await response(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 228, in __call__
+    await run_until_first_complete(
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in run_until_first_complete
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in <listcomp>
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 220, in stream_response
+    async for chunk in self.body_iterator:
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 56, in body_stream
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 44, in app
+    await response(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 228, in __call__
+    await run_until_first_complete(
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in run_until_first_complete
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in <listcomp>
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 220, in stream_response
+    async for chunk in self.body_iterator:
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 54, in iterate_in_threadpool
+    yield await run_in_threadpool(_next, iterator)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 46, in _next
+    return next(iterator)
+TypeError: 'bytes' object is not an iterator
+2021-08-04 12:41:58,320 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 26, in __call__
+    await response(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 228, in __call__
+    await run_until_first_complete(
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in run_until_first_complete
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in <listcomp>
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 220, in stream_response
+    async for chunk in self.body_iterator:
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 56, in body_stream
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 44, in app
+    await response(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 228, in __call__
+    await run_until_first_complete(
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in run_until_first_complete
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in <listcomp>
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 220, in stream_response
+    async for chunk in self.body_iterator:
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 54, in iterate_in_threadpool
+    yield await run_in_threadpool(_next, iterator)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 46, in _next
+    return next(iterator)
+TypeError: 'bytes' object is not an iterator
+2021-08-04 12:44:56,944 - INFO - Shutting down
+2021-08-04 12:44:57,055 - INFO - Waiting for application shutdown.
+2021-08-04 12:44:57,057 - INFO - Application shutdown complete.
+2021-08-04 12:44:57,058 - INFO - Finished server process [14060]
+2021-08-04 12:45:06,948 - INFO - Started server process [14348]
+2021-08-04 12:45:06,949 - INFO - Waiting for application startup.
+2021-08-04 12:45:06,950 - INFO - Application startup complete.
+2021-08-04 12:45:06,951 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 12:45:32,676 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 148, in run_endpoint_function
+    return await dependant.call(**values)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 31, in get_images
+    img.save(image, format='PNG', quality=100)   # Save image to BytesIO
+NameError: name 'img' is not defined
+2021-08-04 12:45:48,114 - INFO - Shutting down
+2021-08-04 12:45:48,225 - INFO - Finished server process [14348]
+2021-08-04 12:45:48,341 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000002B7376B15E0>()]>>
+2021-08-04 12:45:48,341 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-08-04 12:45:57,979 - INFO - Started server process [17220]
+2021-08-04 12:45:57,980 - INFO - Waiting for application startup.
+2021-08-04 12:45:57,981 - INFO - Application startup complete.
+2021-08-04 12:45:57,982 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 12:46:03,120 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 26, in __call__
+    await response(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 228, in __call__
+    await run_until_first_complete(
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in run_until_first_complete
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in <listcomp>
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 220, in stream_response
+    async for chunk in self.body_iterator:
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 56, in body_stream
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 44, in app
+    await response(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 228, in __call__
+    await run_until_first_complete(
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in run_until_first_complete
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in <listcomp>
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 220, in stream_response
+    async for chunk in self.body_iterator:
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 54, in iterate_in_threadpool
+    yield await run_in_threadpool(_next, iterator)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 46, in _next
+    return next(iterator)
+TypeError: 'bytes' object is not an iterator
+2021-08-04 12:46:50,545 - INFO - Shutting down
+2021-08-04 12:46:50,657 - INFO - Waiting for application shutdown.
+2021-08-04 12:46:50,658 - INFO - Application shutdown complete.
+2021-08-04 12:46:50,659 - INFO - Finished server process [17220]
+2021-08-04 12:47:00,977 - INFO - Started server process [5444]
+2021-08-04 12:47:00,977 - INFO - Waiting for application startup.
+2021-08-04 12:47:00,992 - INFO - Application startup complete.
+2021-08-04 12:47:00,993 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 12:47:13,166 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 26, in __call__
+    await response(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 228, in __call__
+    await run_until_first_complete(
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in run_until_first_complete
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in <listcomp>
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 220, in stream_response
+    async for chunk in self.body_iterator:
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 56, in body_stream
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 44, in app
+    await response(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 228, in __call__
+    await run_until_first_complete(
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in run_until_first_complete
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in <listcomp>
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 220, in stream_response
+    async for chunk in self.body_iterator:
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 54, in iterate_in_threadpool
+    yield await run_in_threadpool(_next, iterator)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 46, in _next
+    return next(iterator)
+TypeError: 'bytes' object is not an iterator
+2021-08-04 12:47:21,877 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 26, in __call__
+    await response(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 228, in __call__
+    await run_until_first_complete(
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in run_until_first_complete
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in <listcomp>
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 220, in stream_response
+    async for chunk in self.body_iterator:
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 56, in body_stream
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 44, in app
+    await response(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 228, in __call__
+    await run_until_first_complete(
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in run_until_first_complete
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in <listcomp>
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 220, in stream_response
+    async for chunk in self.body_iterator:
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 54, in iterate_in_threadpool
+    yield await run_in_threadpool(_next, iterator)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 46, in _next
+    return next(iterator)
+TypeError: 'bytes' object is not an iterator
+2021-08-04 12:52:29,821 - INFO - Shutting down
+2021-08-04 12:52:29,930 - INFO - Waiting for application shutdown.
+2021-08-04 12:52:29,932 - INFO - Application shutdown complete.
+2021-08-04 12:52:29,933 - INFO - Finished server process [5444]
+2021-08-04 12:52:39,361 - INFO - Started server process [2060]
+2021-08-04 12:52:39,363 - INFO - Waiting for application startup.
+2021-08-04 12:52:39,364 - INFO - Application startup complete.
+2021-08-04 12:52:39,365 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 12:58:16,337 - INFO - Shutting down
+2021-08-04 12:58:16,447 - INFO - Waiting for application shutdown.
+2021-08-04 12:58:16,449 - INFO - Application shutdown complete.
+2021-08-04 12:58:16,450 - INFO - Finished server process [2060]
+2021-08-04 13:01:34,930 - INFO - Started server process [14920]
+2021-08-04 13:01:34,931 - INFO - Waiting for application startup.
+2021-08-04 13:01:34,932 - INFO - Application startup complete.
+2021-08-04 13:01:34,933 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 13:05:04,394 - INFO - Shutting down
+2021-08-04 13:05:04,504 - INFO - Waiting for application shutdown.
+2021-08-04 13:05:04,505 - INFO - Application shutdown complete.
+2021-08-04 13:05:04,506 - INFO - Finished server process [14920]
+2021-08-04 13:05:14,399 - INFO - Started server process [964]
+2021-08-04 13:05:14,401 - INFO - Waiting for application startup.
+2021-08-04 13:05:14,401 - INFO - Application startup complete.
+2021-08-04 13:05:14,402 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 13:10:09,284 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 26, in __call__
+    await response(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 228, in __call__
+    await run_until_first_complete(
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in run_until_first_complete
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in <listcomp>
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 220, in stream_response
+    async for chunk in self.body_iterator:
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 56, in body_stream
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 44, in app
+    await response(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 228, in __call__
+    await run_until_first_complete(
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in run_until_first_complete
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in <listcomp>
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 220, in stream_response
+    async for chunk in self.body_iterator:
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 54, in iterate_in_threadpool
+    yield await run_in_threadpool(_next, iterator)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 46, in _next
+    return next(iterator)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 28, in iterfile
+    with open('./images/'+file_name, mode="rb") as file_like:
+FileNotFoundError: [Errno 2] No such file or directory: './images/pre-processing.png'
+2021-08-04 13:10:10,631 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 26, in __call__
+    await response(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 228, in __call__
+    await run_until_first_complete(
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in run_until_first_complete
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in <listcomp>
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 220, in stream_response
+    async for chunk in self.body_iterator:
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 56, in body_stream
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 44, in app
+    await response(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 228, in __call__
+    await run_until_first_complete(
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in run_until_first_complete
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in <listcomp>
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 220, in stream_response
+    async for chunk in self.body_iterator:
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 54, in iterate_in_threadpool
+    yield await run_in_threadpool(_next, iterator)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 46, in _next
+    return next(iterator)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 28, in iterfile
+    with open('./images/'+file_name, mode="rb") as file_like:
+FileNotFoundError: [Errno 2] No such file or directory: './images/pre-processing.png'
+2021-08-04 13:19:48,678 - INFO - Shutting down
+2021-08-04 13:19:48,787 - INFO - Finished server process [964]
+2021-08-04 13:19:48,915 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000001DF10CA0670>()]>>
+2021-08-04 13:19:48,915 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-08-04 13:19:59,816 - INFO - Started server process [11756]
+2021-08-04 13:19:59,817 - INFO - Waiting for application startup.
+2021-08-04 13:19:59,818 - INFO - Application startup complete.
+2021-08-04 13:19:59,819 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 13:23:44,089 - INFO - Shutting down
+2021-08-04 13:23:44,200 - INFO - Waiting for application shutdown.
+2021-08-04 13:23:44,202 - INFO - Application shutdown complete.
+2021-08-04 13:23:44,203 - INFO - Finished server process [11756]
+2021-08-04 13:24:07,705 - INFO - Started server process [15976]
+2021-08-04 13:24:07,706 - INFO - Waiting for application startup.
+2021-08-04 13:24:07,707 - INFO - Application startup complete.
+2021-08-04 13:24:07,708 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 13:55:37,898 - INFO - Shutting down
+2021-08-04 13:55:38,008 - INFO - Waiting for application shutdown.
+2021-08-04 13:55:38,009 - INFO - Application shutdown complete.
+2021-08-04 13:55:38,009 - INFO - Finished server process [15976]
+2021-08-04 14:12:31,571 - INFO - Started server process [11684]
+2021-08-04 14:12:31,573 - INFO - Waiting for application startup.
+2021-08-04 14:12:31,574 - INFO - Application startup complete.
+2021-08-04 14:12:31,575 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 14:18:13,893 - INFO - Shutting down
+2021-08-04 14:18:14,005 - INFO - Waiting for application shutdown.
+2021-08-04 14:18:14,006 - INFO - Application shutdown complete.
+2021-08-04 14:18:14,006 - INFO - Finished server process [11684]
+2021-08-04 14:18:25,532 - INFO - Started server process [9888]
+2021-08-04 14:18:25,532 - INFO - Waiting for application startup.
+2021-08-04 14:18:25,534 - INFO - Application startup complete.
+2021-08-04 14:18:25,535 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 14:31:20,450 - INFO - Shutting down
+2021-08-04 14:31:20,560 - INFO - Finished server process [9888]
+2021-08-04 14:31:20,694 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x0000025002CCEB80>()]>>
+2021-08-04 14:31:20,694 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-08-04 14:31:32,190 - INFO - Started server process [14512]
+2021-08-04 14:31:32,191 - INFO - Waiting for application startup.
+2021-08-04 14:31:32,192 - INFO - Application startup complete.
+2021-08-04 14:31:32,193 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 14:32:23,371 - INFO - Shutting down
+2021-08-04 14:32:23,472 - INFO - Waiting for application shutdown.
+2021-08-04 14:32:23,473 - INFO - Application shutdown complete.
+2021-08-04 14:32:23,473 - INFO - Finished server process [14512]
+2021-08-04 14:33:12,050 - INFO - Started server process [12188]
+2021-08-04 14:33:12,052 - INFO - Waiting for application startup.
+2021-08-04 14:33:12,053 - INFO - Application startup complete.
+2021-08-04 14:33:12,054 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 14:34:04,198 - INFO - Shutting down
+2021-08-04 14:34:04,309 - INFO - Waiting for application shutdown.
+2021-08-04 14:34:04,310 - INFO - Application shutdown complete.
+2021-08-04 14:34:04,311 - INFO - Finished server process [12188]
+2021-08-04 14:34:15,355 - INFO - Started server process [6788]
+2021-08-04 14:34:15,356 - INFO - Waiting for application startup.
+2021-08-04 14:34:15,357 - INFO - Application startup complete.
+2021-08-04 14:34:15,358 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 14:35:47,780 - INFO - Shutting down
+2021-08-04 14:35:47,896 - INFO - Waiting for application shutdown.
+2021-08-04 14:35:47,898 - INFO - Application shutdown complete.
+2021-08-04 14:35:47,899 - INFO - Finished server process [6788]
+2021-08-04 14:35:58,483 - INFO - Started server process [3260]
+2021-08-04 14:35:58,484 - INFO - Waiting for application startup.
+2021-08-04 14:35:58,485 - INFO - Application startup complete.
+2021-08-04 14:35:58,485 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 14:37:32,234 - INFO - Shutting down
+2021-08-04 14:37:32,346 - INFO - Waiting for application shutdown.
+2021-08-04 14:37:32,348 - INFO - Application shutdown complete.
+2021-08-04 14:37:32,349 - INFO - Finished server process [3260]
+2021-08-04 14:37:42,926 - INFO - Started server process [17212]
+2021-08-04 14:37:42,928 - INFO - Waiting for application startup.
+2021-08-04 14:37:42,929 - INFO - Application startup complete.
+2021-08-04 14:37:42,930 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 14:40:17,942 - INFO - Shutting down
+2021-08-04 14:40:18,053 - INFO - Waiting for application shutdown.
+2021-08-04 14:40:18,054 - INFO - Application shutdown complete.
+2021-08-04 14:40:18,054 - INFO - Finished server process [17212]
+2021-08-04 14:40:57,686 - INFO - Started server process [1932]
+2021-08-04 14:40:57,688 - INFO - Waiting for application startup.
+2021-08-04 14:40:57,688 - INFO - Application startup complete.
+2021-08-04 14:40:57,689 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 14:43:43,168 - INFO - Shutting down
+2021-08-04 14:43:43,269 - INFO - Waiting for application shutdown.
+2021-08-04 14:43:43,270 - INFO - Application shutdown complete.
+2021-08-04 14:43:43,271 - INFO - Finished server process [1932]
+2021-08-04 14:43:53,538 - INFO - Started server process [15836]
+2021-08-04 14:43:53,540 - INFO - Waiting for application startup.
+2021-08-04 14:43:53,541 - INFO - Application startup complete.
+2021-08-04 14:43:53,544 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 14:45:53,632 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 26, in __call__
+    await response(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 228, in __call__
+    await run_until_first_complete(
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in run_until_first_complete
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in <listcomp>
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 220, in stream_response
+    async for chunk in self.body_iterator:
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 56, in body_stream
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 78, in __call__
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 44, in app
+    await response(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 228, in __call__
+    await run_until_first_complete(
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in run_until_first_complete
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 18, in <listcomp>
+    [task.result() for task in done]
+  File "F:\Tool\Python\lib\site-packages\starlette\responses.py", line 220, in stream_response
+    async for chunk in self.body_iterator:
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 54, in iterate_in_threadpool
+    yield await run_in_threadpool(_next, iterator)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 46, in _next
+    return next(iterator)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 28, in iterfile
+    with open('./images/'+file_name, mode="rb") as file_like:
+FileNotFoundError: [Errno 2] No such file or directory: './images/ea'
+2021-08-04 14:50:52,917 - INFO - Shutting down
+2021-08-04 14:50:53,029 - INFO - Waiting for application shutdown.
+2021-08-04 14:50:53,030 - INFO - Application shutdown complete.
+2021-08-04 14:50:53,030 - INFO - Finished server process [15836]
+2021-08-04 14:51:04,701 - INFO - Started server process [6500]
+2021-08-04 14:51:04,702 - INFO - Waiting for application startup.
+2021-08-04 14:51:04,703 - INFO - Application startup complete.
+2021-08-04 14:51:04,704 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 15:02:23,159 - INFO - Shutting down
+2021-08-04 15:02:23,270 - INFO - Waiting for application shutdown.
+2021-08-04 15:02:23,271 - INFO - Application shutdown complete.
+2021-08-04 15:02:23,272 - INFO - Finished server process [6500]
+2021-08-04 15:02:34,076 - INFO - Started server process [9324]
+2021-08-04 15:02:34,077 - INFO - Waiting for application startup.
+2021-08-04 15:02:34,078 - INFO - Application startup complete.
+2021-08-04 15:02:34,078 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 15:04:31,231 - INFO - Shutting down
+2021-08-04 15:04:31,341 - INFO - Waiting for application shutdown.
+2021-08-04 15:04:31,342 - INFO - Application shutdown complete.
+2021-08-04 15:04:31,343 - INFO - Finished server process [9324]
+2021-08-04 15:04:42,638 - INFO - Started server process [2508]
+2021-08-04 15:04:42,641 - INFO - Waiting for application startup.
+2021-08-04 15:04:42,641 - INFO - Application startup complete.
+2021-08-04 15:04:42,642 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 15:08:37,109 - INFO - Shutting down
+2021-08-04 15:08:37,220 - INFO - Finished server process [2508]
+2021-08-04 15:08:37,351 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x0000018D69FDEB80>()]>>
+2021-08-04 15:08:37,351 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-08-04 15:08:48,898 - INFO - Started server process [13008]
+2021-08-04 15:08:48,900 - INFO - Waiting for application startup.
+2021-08-04 15:08:48,901 - INFO - Application startup complete.
+2021-08-04 15:08:48,902 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 15:12:49,441 - INFO - Shutting down
+2021-08-04 15:12:49,551 - INFO - Waiting for application shutdown.
+2021-08-04 15:12:49,552 - INFO - Application shutdown complete.
+2021-08-04 15:12:49,554 - INFO - Finished server process [13008]
+2021-08-04 15:13:00,245 - INFO - Started server process [6484]
+2021-08-04 15:13:00,246 - INFO - Waiting for application startup.
+2021-08-04 15:13:00,247 - INFO - Application startup complete.
+2021-08-04 15:13:00,248 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 15:20:01,599 - INFO - Shutting down
+2021-08-04 15:20:01,710 - INFO - Waiting for application shutdown.
+2021-08-04 15:20:01,711 - INFO - Application shutdown complete.
+2021-08-04 15:20:01,712 - INFO - Finished server process [6484]
+2021-08-04 15:20:12,261 - INFO - Started server process [4064]
+2021-08-04 15:20:12,263 - INFO - Waiting for application startup.
+2021-08-04 15:20:12,264 - INFO - Application startup complete.
+2021-08-04 15:20:12,265 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 15:29:13,115 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.011s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E335EB0370>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:16,813 - INFO - Shutting down
+2021-08-04 15:29:16,921 - INFO - Waiting for connections to close. (CTRL+C to force quit)
+2021-08-04 15:29:17,032 - INFO - Finished server process [4064]
+2021-08-04 15:29:23,198 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.009s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E336149490>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:25,926 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.014s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E33601D850>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:26,086 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.014s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E33601DA90>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:26,229 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.014s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E336017D90>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:26,291 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.010s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E33601D9A0>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:26,338 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.007s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E33601DE20>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:33,214 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.013s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E37D150DC0>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:35,944 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.015s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E37D1507C0>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:36,102 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.015s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E37D150610>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:36,244 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.013s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E37D14A9A0>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:36,305 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.013s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E37D14AE20>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:36,352 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.012s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E37C9DC820>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:43,223 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.008s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E37C9CDB20>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:45,958 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.014s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E37C9BF2B0>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:46,116 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.012s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E37C9CD130>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:46,257 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.012s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E33600D9D0>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:46,319 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.013s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E37D1507C0>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:46,366 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.013s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E37D150B80>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:55,967 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.007s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E37D150730>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:56,126 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.009s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E335EB07F0>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:56,266 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.008s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E37D151EE0>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:56,328 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.008s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E37D152070>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:56,376 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.009s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x000001E37D152160>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:29:56,515 - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at F:\Tool\Python\lib\site-packages\uvicorn\lifespan\on.py:55> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000001E33D94EAF0>()]>>
+2021-08-04 15:29:56,515 - INFO - ASGI 'lifespan' protocol appears unsupported.
+2021-08-04 15:30:13,046 - INFO - Started server process [15616]
+2021-08-04 15:30:13,047 - INFO - Waiting for application startup.
+2021-08-04 15:30:13,048 - INFO - Application startup complete.
+2021-08-04 15:30:13,049 - INFO - Uvicorn running on http://0.0.0.0:8082 (Press CTRL+C to quit)
+2021-08-04 15:30:32,688 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.001s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x0000025A512B5B50>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:30:42,705 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.014s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x0000025A512B5F70>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:30:52,713 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.005s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x0000025A51217190>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:31:02,717 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.002s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x0000025A51217F40>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:31:02,720 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 95, in pre_processing
+    pred = es_utils.matching_elasticsearch_index(es, config_ml.INDEX_NAME, es_dim)
+  File "E:\Github\image-classify\backend\app\helpers\es_utils.py", line 92, in matching_elasticsearch_index
+    res = es.search(index= index_name, body = query)
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\client\utils.py", line 168, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\client\__init__.py", line 1670, in search
+    return self.transport.perform_request(
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\transport.py", line 413, in perform_request
+    raise e
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\transport.py", line 381, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 266, in perform_request
+    raise ConnectionError("N/A", str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError((<urllib3.connection.HTTPConnection object at 0x0000025A51217F40>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')) caused by: ConnectTimeoutError((<urllib3.connection.HTTPConnection object at 0x0000025A51217F40>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)'))
+2021-08-04 15:31:06,478 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.002s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x0000025A510670D0>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:31:16,484 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.005s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x0000025A50F9A1C0>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:31:26,487 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:10.001s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x0000025A51067520>, 'Connection to 10.1.32.130 timed out. (connect timeout=10)')
+2021-08-04 15:31:32,578 - WARNING - POST http://10.1.32.130:9200/image-classify/_search [status:N/A request:6.090s]
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 96, in create_connection
+    raise err
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\connection.py", line 86, in create_connection
+    sock.connect(sa)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 251, in perform_request
+    response = self.pool.urlopen(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "F:\Tool\Python\lib\site-packages\urllib3\util\retry.py", line 507, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "F:\Tool\Python\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "F:\Tool\Python\lib\site-packages\urllib3\connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "F:\Tool\Python\lib\http\client.py", line 1257, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1303, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1252, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "F:\Tool\Python\lib\http\client.py", line 1012, in _send_output
+    self.send(msg)
+  File "F:\Tool\Python\lib\http\client.py", line 952, in send
+    self.connect()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "F:\Tool\Python\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000025A512B5FA0>: Failed to establish a new connection: [WinError 10053] An established connection was aborted by the software in your host machine
+2021-08-04 15:31:32,580 - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "F:\Tool\Python\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 396, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 45, in __call__
+    return await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 81, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\uvicorn\middleware\debug.py", line 78, in __call__
+    await self.app(scope, receive, inner_send)
+  File "F:\Tool\Python\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\applications.py", line 111, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 25, in __call__
+    response = await self.dispatch_func(request, self.call_next)
+  File "E:\Github\image-classify\backend\app\main.py", line 49, in db_session_middleware
+    response = await call_next(request)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 45, in call_next
+    task.result()
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\base.py", line 38, in coro
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 86, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "F:\Tool\Python\lib\site-packages\starlette\middleware\cors.py", line 142, in simple_response
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "F:\Tool\Python\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 566, in __call__
+    await route.handle(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 227, in handle
+    await self.app(scope, receive, send)
+  File "F:\Tool\Python\lib\site-packages\starlette\routing.py", line 41, in app
+    response = await func(request)
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "F:\Tool\Python\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "F:\Tool\Python\lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "F:\Tool\Python\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "E:\Github\image-classify\backend\app\api\resources\v1\image_classify.py", line 95, in pre_processing
+    pred = es_utils.matching_elasticsearch_index(es, config_ml.INDEX_NAME, es_dim)
+  File "E:\Github\image-classify\backend\app\helpers\es_utils.py", line 92, in matching_elasticsearch_index
+    res = es.search(index= index_name, body = query)
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\client\utils.py", line 168, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\client\__init__.py", line 1670, in search
+    return self.transport.perform_request(
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\transport.py", line 413, in perform_request
+    raise e
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\transport.py", line 381, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "F:\Tool\Python\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 266, in perform_request
+    raise ConnectionError("N/A", str(e), e)
+elasticsearch.exceptions.ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x0000025A512B5FA0>: Failed to establish a new connection: [WinError 10053] An established connection was aborted by the software in your host machine) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x0000025A512B5FA0>: Failed to establish a new connection: [WinError 10053] An established connection was aborted by the software in your host machine)
+2021-08-04 16:04:56,002 - INFO - Shutting down
+2021-08-04 16:04:56,114 - INFO - Waiting for application shutdown.
+2021-08-04 16:04:56,115 - INFO - Application shutdown complete.
+2021-08-04 16:04:56,117 - INFO - Finished server process [15616]
