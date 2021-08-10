@@ -12,6 +12,7 @@ from settings import config_ml
 from helpers import text_utils
 from helpers import es_utils
 import torch
+from settings import config
 
 import cv2
 import numpy as np
@@ -103,7 +104,7 @@ def pre_processing(
         class_pre = hits[int(max_end)]['_source']['id']
         score = hits[int(max_end)]['_score']/2
     class_pre['score'] = score
-    class_pre['pre_url'] = 'http://10.1.133.3:8082/api/v1/image-classify/images/'+ file_name
+    class_pre['pre_url'] = 'http://{}:8082/api/v1/image-classify/images/'.format(config.HOST_NAME) + file_name
     return class_pre
 
     
