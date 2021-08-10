@@ -1,10 +1,5 @@
-from fastapi import Depends, APIRouter, Form, UploadFile, HTTPException, File
-from sqlalchemy.orm import Session
-from databases.db import get_db
-
-
-from ml  import scanner, phobert, es, tesseract, tokenizer
-from helpers import image_utils
+from fastapi import APIRouter, Form, UploadFile, HTTPException, File
+from ml  import phobert, es, tokenizer
 import nltk
 nltk.download('punkt')
 from nltk.tokenize import word_tokenize
@@ -12,13 +7,12 @@ from settings import config_ml
 from helpers import text_utils
 from helpers import es_utils
 import torch
-
 import cv2
 import numpy as np
 import uuid
+from ml import reader
 
 router = APIRouter()
-
 
 
 @router.post("/indices")
@@ -34,10 +28,17 @@ def create(
     if len(byte_file) > 20**22: 
         raise HTTPException(status_code=400, detail="wrong size > 20MB")
     image = cv2.imdecode(np.frombuffer(byte_file, np.uint8), 1)
-    image = image_utils.pre_process(image)
-    text = tesseract.excecute(image)
-    tokens = word_tokenize(text_utils.text_cleaner(text))
+
+    bounds = reader.readtext(image)
+
+    texts = ''
+    for item in bounds:
+        box, text, score = item
+        texts += ' '+ text
+
+    tokens = word_tokenize(text_utils.text_cleaner(texts))
     tokens = text_utils.fix_tokens(tokens, config_ml.STOPWORDS)
+
     if len(tokens) >= config_ml.LEN_TOKEN:
         tokens = tokens[0:config_ml.LEN_TOKEN]
     else:

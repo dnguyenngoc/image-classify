@@ -6,6 +6,9 @@ __pycache__
 models
 
 datasets/image*
+*.log
+*.log*
+
 
 env-stag.ini
 LineCounter
