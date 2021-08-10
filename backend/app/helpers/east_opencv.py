@@ -4,6 +4,7 @@ import numpy as np
 import argparse
 import time
 import cv2
+import pytesseract
 
 
 MIN_CONFIDENCE = 0.01
@@ -19,7 +20,9 @@ class EAST:
     def __init__(self, east_path: str) -> None:
         self.net = cv2.dnn.readNet(east_path)
 
+
     def get_text(self, image):
+
         # load the input image and grab the image dimensions
         (H, W) = image.shape[:2]
         
@@ -111,6 +114,47 @@ class EAST:
         return rects, confidences, rW, rH
 
 
+    def list_roi(self, orig, rects, confidences, rW, rH):
+        (H, W) = orig.shape[:2]
+        config = ("-l vie --oem 1 --psm 7")
+        boxes = non_max_suppression(np.array(rects), probs=confidences)
+        results = []
+        for (startX, startY, endX, endY) in boxes:
+            # scale the bounding box coordinates based on the respective
+            # ratios
+            if startX < 0: startX = 0
+            if startY < 0: startY = 0
+            if endX  > W: endX = W
+            if endY > H: endY = H
+            padding = 11
+            try:
+                _startX = int(startX * rW - padding)
+                _startY = int(startY * rH - padding)
+                _endX = int(endX * rW + padding)
+                _endY = int(endY * rH + padding)
+                crop_img = orig[_startY:_endY, _startX:_endX]
+                text = pytesseract.image_to_string(crop_img, config=config)
+            except:
+                _startX = int(startX * rW)
+                _startY = int(startY * rH)
+                _endX = int(endX * rW)
+                _endY = int(endY * rH)
+                crop_img = orig[_startY:_endY, _startX:_endX]
+                print('new-nopading: ', _startX, _startY, _endX, _endY)
+                text = pytesseract.image_to_string(crop_img, config=config)
+            results.append(((startX, startY, endX, endY), text))
+        return results
+
+    def text_roi_sort(self, orig, rects, confidences, rW, rH):
+        results = self.list_roi(orig, rects, confidences, rW, rH)
+        results = sorted(results, key=lambda r:r[0][1])
+        texts = ''
+        for ((startX, startY, endX, endY), text) in results:
+            texts += ' ' + text
+        return texts
+
+
+
     def draw_box(self, orig, rects, confidences, rW, rH):
         # apply non-maxima suppression to suppress weak, overlapping bounding
         # boxes
@@ -120,26 +164,13 @@ class EAST:
         for (startX, startY, endX, endY) in boxes:
             # scale the bounding box coordinates based on the respective
             # ratios
-            startX = int(startX * rW)
-            startY = int(startY * rH)
-            endX = int(endX * rW)
-            endY = int(endY * rH)
+            padding = 12
+            startX = int(startX * rW -padding)
+            startY = int(startY * rH - padding)
+            endX = int(endX * rW + padding)
+            endY = int(endY * rH + padding)
         
             # draw the bounding box on the image
             cv2.rectangle(orig, (startX, startY), (endX, endY), (0, 255, 0), 2)
         
         return orig
-
-    def get_list_of_crop(self, orig, rects, confidences, rW, rH):
-        boxes = non_max_suppression(np.array(rects), probs=confidences)
-        data = []
-        for (startX, startY, endX, endY) in boxes:
-            # scale the bounding box coordinates based on the respective
-            # ratios
-            startX = int(startX * rW)
-            startY = int(startY * rH)
-            endX = int(endX * rW)
-            endY = int(endY * rH)
-            crop_img = orig[startY:endY, startX:endX]
-            data.append(crop_img)
-        return data

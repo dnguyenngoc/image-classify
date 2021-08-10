@@ -2,10 +2,13 @@ import glob
 import cv2
 from torchvision.transforms import transforms
 import numpy as np
-# from pythonRLSA import rlsa
-import math
-from scipy.ndimage import interpolation as inter
+# from scipy.ndimage import interpolation as inter
 from helpers.skew import SkewDetect
+import PIL
+from PIL import ImageDraw
+from PIL import Image
+from matplotlib import cm
+import numpy as np
 
 skew = SkewDetect()
 
@@ -51,6 +54,14 @@ def load_image_transform(image_path):
 #     return mask2, image
 
 
+def draw_boxes(image, bounds, color='yellow', width=2):
+    draw = ImageDraw.Draw(image)
+    for bound in bounds:
+        p0, p1, p2, p3 = bound[0]
+        draw.line([*p0, *p1, *p2, *p3, *p0], fill=color, width=width)
+    return image
+
+
 def show(img, name="disp", width=1000):
     """
     name: name of window, should be name of img
@@ -72,12 +83,21 @@ def load(path):
     return image
 
 
+def load_pil(path):
+    im = PIL.Image.open(path)
+    return im
+
+
+def to_pil_image(image):
+    im_box = Image.fromarray(image)
+    return im_box
+
+
 def pre_process(img):
     img = skew.determine_skew(img)
     img = cv2.resize(img, None, fx=1.5, fy=1.5, interpolation=cv2.INTER_CUBIC)
     # Converting to gray scale
     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    
     
     #Removing Shadows
     rgb_planes = cv2.split(img)
@@ -103,7 +123,6 @@ def pre_process(img):
     imgf = cv2.adaptiveThreshold(img,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY,11,2)
     
     return imgf
-
     
 
 # get grayscale image
