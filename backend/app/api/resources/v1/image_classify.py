@@ -48,11 +48,11 @@ async def pre_processing(
     bounds = reader.readtext(image)
 
     pil_image = image_utils.to_pil_image(image)
-    pil_image = image_utils.draw_boxes(image = pil_image, bounds=bounds)
+    pil_image, max_index = image_utils.draw_boxes(image = pil_image, bounds=bounds)
     # cv2.imwrite('./images/' + file_name,  pil_image)
     pil_image.save('./images/' + file_name)
 
-    texts = ''
+    texts = bounds[max_index][1]
     for item in bounds:
         box, text, score = item
         texts += ' '+ text
@@ -72,7 +72,7 @@ async def pre_processing(
     hits = pred['hits']['hits']
     score = hits[0]['_score']/2
     class_pre = hits[0]['_source']
-    if score < 0.86:
+    if score < 0.92:
         a = {'0': 0, '1':0, '2': 0}
         for i in range(len(hits)):
             a[str(i)] += 1

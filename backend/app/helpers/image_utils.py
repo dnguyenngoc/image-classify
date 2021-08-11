@@ -56,10 +56,16 @@ def load_image_transform(image_path):
 
 def draw_boxes(image, bounds, color='yellow', width=2):
     draw = ImageDraw.Draw(image)
-    for bound in bounds:
+    max_index = 0
+    max_check = 0
+    for i in range(len(bounds)):
+        bound = bounds[i]
         p0, p1, p2, p3 = bound[0]
+        if p3[1] - p0[1] > max_check:
+            max_check = p3[1] - p0[1]
+            max_index = i
         draw.line([*p0, *p1, *p2, *p3, *p0], fill=color, width=width)
-    return image
+    return image, max_index
 
 
 def show(img, name="disp", width=1000):
